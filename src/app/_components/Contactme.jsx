@@ -1,4 +1,4 @@
-import ContactMeForm from "@/app/_components/contactmeForm";
+import ContactMeForm from "@/app/_components/contactMeForm";
 
 function ContactMe() {
 	return (
