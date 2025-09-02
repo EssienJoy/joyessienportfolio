@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { FaPlus } from "react-icons/fa6";
-import { FaTimes } from "react-icons/fa";
 
 import Button from "@/app/_ui/Button";
+import { FaTimes } from "react-icons/fa";
+import { TiPlus } from "react-icons/ti";
 
 const aboutMeFaq = [
 	{
@@ -65,11 +65,13 @@ function AboutMeFaq() {
 					className='border-b-primary-grey border-b rounded-2xl pl-4'
 					key={faq.id}>
 					<h2 className='text-lg sm:text-2xl font-medium pb-3 flex gap-3 items-center'>
-						<Button className='p-3' onClick={() => handleOpen(faq.id)}>
+						<Button
+							className='p-3 text-primary-grey'
+							onClick={() => handleOpen(faq.id)}>
 							{openId === faq.id ? (
-								<FaTimes size='1.5rem' />
+								<FaTimes size='1.5rem' className='shrink-0' />
 							) : (
-								<FaPlus size='1.5rem' />
+								<TiPlus size='2rem' className='shrink-0' />
 							)}
 						</Button>
 						<span>{faq.question}</span>

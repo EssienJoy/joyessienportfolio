@@ -2,9 +2,7 @@ import Link from "@/app/_ui/Link";
 
 function Hero() {
 	return (
-		<section
-			className=' relative grid gap-3 mx-auto min-h-screen pt-[10rem] sm:pt-[12rem] '
-			id='home'>
+		<section className=' grid mx-auto pt-[10rem] sm:pt-[12rem] ' id='home'>
 			<section className='lg:w-[80%] mx-auto px-[var(--spacing-padding-inline)]'>
 				<h1 className={`text-3xl sm:text-5xl font-medium `}>
 					✨ Hi, I’m Essien Joy.

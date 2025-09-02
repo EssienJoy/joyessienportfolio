@@ -36,7 +36,7 @@ function Skills() {
 					/>
 				</Button>
 
-				<div className=' flex flex-col w-30 h-30 p-4  border border-solid border-primary-grey items-center justify-center overflow-hidden'>
+				<div className=' flex flex-col w-25 h-20   border border-solid border-primary-grey items-center justify-center overflow-hidden'>
 					<p>{skills[skillPosition]}</p>
 				</div>
 
