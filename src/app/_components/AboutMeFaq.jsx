@@ -71,7 +71,7 @@ function AboutMeFaq() {
 							{openId === faq.id ? (
 								<FaTimes size='1.5rem' className='shrink-0' />
 							) : (
-								<TiPlus size='2rem' className='shrink-0' />
+								<TiPlus size='1.5rem' className='shrink-0' />
 							)}
 						</Button>
 						<span>{faq.question}</span>
