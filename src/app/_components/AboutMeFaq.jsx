@@ -64,7 +64,14 @@ function AboutMeFaq() {
 				<div
 					className='border-b-primary-grey border-b rounded-2xl pl-4'
 					key={faq.id}>
-					<h2 className='text-lg sm:text-2xl font-medium pb-3 flex gap-3 items-center'>
+					<div
+						className='flex justify-between  items-center cursor-pointer'
+						role='button'
+						onClick={() => handleOpen(faq.id)}>
+						<h2 className='text-lg sm:text-2xl font-medium pb-3 '>
+							{faq.question}
+						</h2>
+
 						<Button
 							className='p-3 text-primary-grey'
 							onClick={() => handleOpen(faq.id)}>
@@ -74,8 +81,7 @@ function AboutMeFaq() {
 								<TiPlus size='1.5rem' className='shrink-0' />
 							)}
 						</Button>
-						<span>{faq.question}</span>
-					</h2>
+					</div>
 
 					{openId === faq.id && (
 						<p className='text-sm sm:text-lg pb-4'>{faq.answer}</p>

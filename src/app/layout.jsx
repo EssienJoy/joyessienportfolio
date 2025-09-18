@@ -1,5 +1,6 @@
 import "@/app/_styles/globals.css";
 import { Space_Grotesk } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
 						<Footer />
 					</footer>
 				</div>
+				<Toaster />
 			</body>
 		</html>
 	);

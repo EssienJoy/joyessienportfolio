@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { BiLogoGmail } from "react-icons/bi";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import Link from "next/link";
+import EmailCopy from "./CopyEmail";
 
 function Footer() {
 	return (
@@ -11,13 +11,7 @@ function Footer() {
 			<p className='text-sm'>©2025 Essien Joy</p>
 
 			<aside className='flex justify-center items-center gap-6'>
-				<Link
-					href='essienjoyidaratechie@gmail.com'
-					target='_blank'
-					rel='noopener noreferrer'
-					aria-label='Email'>
-					<BiLogoGmail size='2rem' />
-				</Link>
+				<EmailCopy />
 
 				<Link
 					href='https://www.linkedin.com/in/essien-joy-838b3b23a/'

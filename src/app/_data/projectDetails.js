@@ -26,12 +26,13 @@ export const projects = [
         features: [
             {
                 problem: "Users struggling to complete a task",
-                solution: "Countdown and reminders",
+                solution: "Create Plans,Track goals,Countdown and reminders",
+                video: process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID_PLANNER_FEAT
             },
         ],
         stack: ["Styled Components", "React"],
-        github: "/wip",
-        live: "/wip",
+        github: "https://github.com/EssienJoy/planner",
+        live: "https://planner-six-chi.vercel.app/",
     },
     {
         note: info,
@@ -56,7 +57,7 @@ export const projects = [
             },
         ],
         stack: ["Tailwind CSS", "JavaScript"],
-        github: "/wip",
+        github: "https://github.com/EssienJoy/eazymart",
         live: "/wip",
     },
     {

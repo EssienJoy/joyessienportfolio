@@ -11,7 +11,7 @@ function ProjectNavigation({ project, projectLength }) {
 					Prev
 				</Link>
 			)}
-			<p className='font-medium text-2xl grid place-items-center'>
+			<p className='font-medium text-lg grid place-items-center'>
 				{project.id}/{projectLength}
 			</p>
 			{project.id < projectLength && (

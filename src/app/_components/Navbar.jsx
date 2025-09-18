@@ -7,7 +7,7 @@ import { IoIosPaper } from "react-icons/io";
 
 function Navbar() {
 	return (
-		<nav className='shadow-xl rounded-[1rem] backdrop-blur-[1px]  border-primary-black border-solid border mx-auto w-[19rem] py-7 sm:w-[25rem]'>
+		<nav className='shadow-xl rounded-[1rem] backdrop-blur-[1px]  border-primary-black border-solid border mx-auto w-[19rem] py-4 sm:py-5 sm:w-[25rem]'>
 			<ul className='flex items-center justify-center font-medium  text-xl gap-5 sm:gap-10'>
 				<li>
 					<Link href='\'>
