@@ -19,7 +19,10 @@ function Hero() {
 					<Link href='#skills'>My Skills</Link>
 					<Link href='#socials'>View Socials</Link>
 					<Link href='#contactme'>Contact me</Link>
-					<Link href='/wip'>Download Cv</Link>
+					<Link href='/ESSIEN-JOY-PDF.pdf' download>
+						{" "}
+						Download Cv
+					</Link>
 				</div>
 			</section>
 		</section>
