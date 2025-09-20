@@ -34,7 +34,10 @@ function Navbar() {
 				</li>
 
 				<li>
-					<Link href='/ESSIEN-JOY-PDF.pdf'>
+					<Link
+						href='/ESSIEN-JOY-PDF.pdf'
+						target='_blank'
+						rel='noopener noreferrer'>
 						<IoIosPaper size='2rem' title='download resume or cv' />
 					</Link>
 				</li>

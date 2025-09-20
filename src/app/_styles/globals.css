@@ -108,7 +108,38 @@ body {
   }
 }
 
-.animate-gradient-calm {
-  animation: gradient-calm 15s ease-in-out infinite;
-  background-size: 200% 200%;
+
+.slider {
+  position: relative;
+  background-color: red;
+}
+
+.list {
+  animation: scroll 15s linear infinite;
+  background-color: burlywood;
+}
+
+.list>* {
+  flex: 0 0 auto;
+}
+
+.list:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+
 }

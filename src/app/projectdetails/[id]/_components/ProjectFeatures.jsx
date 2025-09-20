@@ -1,17 +1,18 @@
 import MuxPlayer from "@mux/mux-player-react";
 import LaptopFrame from "@/app/_components/LaptopFrame";
-import { createBlurUp } from "@mux/blurup";
-
-const options = {};
+import { getBlurredPlaceholder } from "@/app/_services/apidata";
+// import { createBlurUp } from "@mux/blurup";
 
 async function ProjectFeatures({ project }) {
+	const options = {};
+
 	return (
 		<>
 			{await Promise.all(
 				project.features?.map(async (feat, index) => {
 					let blurData = { blurDataURL: "", aspectRatio: "16/9" };
 					if (feat?.video) {
-						blurData = await createBlurUp(feat.video, options);
+						blurData = await getBlurredPlaceholder(feat.video, options);
 					}
 
 					return (
