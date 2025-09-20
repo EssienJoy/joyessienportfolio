@@ -111,12 +111,10 @@ body {
 
 .slider {
   position: relative;
-  background-color: red;
 }
 
 .list {
   animation: scroll 15s linear infinite;
-  background-color: burlywood;
 }
 
 .list>* {
