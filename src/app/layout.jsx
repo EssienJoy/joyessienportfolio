@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
 			<body className={`${spaceGrotesk.className} `}>
 				<Header />
 
-				<div className='line-layout max-w-[var(--cotainer--main)] mx-auto '>
+				<div className='line-layout max-w-[var(--container--main)] mx-auto '>
 					<main>{children}</main>
 					<footer className='bg-primary-black text-primary-grey py-6 mt-6'>
 						<Footer />
