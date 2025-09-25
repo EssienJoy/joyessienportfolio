@@ -1,16 +1,20 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { otherProjects } from "../_data/projectDetails";
+import { otherProjects as data } from "../_data/projectDetails";
+import ToggleOtherProjects from "./ToggleOtherProjects";
+import { useState } from "react";
 
 export default function OtherProjects() {
+	const [expanded, setExpanded] = useState(false);
+
+	const visibleProjects = expanded ? data : data.slice(0, 2) || data;
+
 	return (
 		<section className='my-10 '>
-			<h2 className='text-3xl sm:text-4xl font-semibold text-center mb-10'>
-				Other Projects
-			</h2>
-
+			<ToggleOtherProjects setExpanded={setExpanded} expanded={expanded} />
 			<ul className='grid md:grid-cols-2 gap-5'>
-				{otherProjects.map((project, i) => (
+				{visibleProjects.map((project, i) => (
 					<li
 						key={i}
 						className='self-start flex flex-col rounded-3xl shadow-2xl overflow-hidden'>
@@ -36,7 +40,7 @@ export default function OtherProjects() {
 							{project.stack.map((stack, idx) => (
 								<p
 									key={idx}
-									className='text-center border border-primary-black p-2 bg-black text-primary-grey rounded-lg'>
+									className='text-center border border-primary-black p-2 bg-black text-primary-grey '>
 									{stack}
 								</p>
 							))}
