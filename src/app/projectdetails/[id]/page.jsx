@@ -21,7 +21,7 @@ async function page({ params }) {
 					⚠️ {project?.note}
 				</p>
 			)}
-			<ProjectArrowBack />
+			<ProjectArrowBack id={id} />
 			<h2 className='text-3xl sm:text-5xl font-medium text-center'>{title}</h2>
 			<ProjectOverview project={project} />
 			<section className='bg-[#cbcbcb] backdrop-blur-[2px] drop-shadow-2xl rounded-3xl  p-3 sm:p-5 my-10'>
