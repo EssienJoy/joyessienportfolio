@@ -20,7 +20,7 @@ function Hero() {
 					<Link href='#socials'>View Socials</Link>
 					<Link href='#contactme'>Contact me</Link>
 					<Link href='/essien-joy-cv.pdf' download>
-						Download Cv
+-						Download Cv
 					</Link>
 				</div>
 			</section>
