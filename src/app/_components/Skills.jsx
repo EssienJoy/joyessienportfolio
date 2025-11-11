@@ -20,13 +20,13 @@ function Skills() {
 		<section
 			ref={skillsRef}
 			id='skills'
-			className='px-[var(--spacing-padding-inline)] py-10 my-10 text-primary-black'>
+			className='px-[var(--spacing-padding-inline)] py-10 my-10 text-primary-black dark:text-primary-white'>
 			<h2 className=' text-3xl sm:text-4xl font-medium text-center  my-5'>
 				Skills
 			</h2>
 
 			<div
-				className={`bg-primary-black text-primary-grey flex flex-col gap-6 w-40 h-40 mx-auto py-3 my-10 border border-solid border-primary-grey items-center justify-center overflow-hidden transition-all duration-500 ${
+				className={`bg-primary-black text-primary-grey flex flex-col gap-6 w-40 h-40 mx-auto py-3 my-10  items-center justify-center overflow-hidden transition-all duration-500 ${
 					fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
 				}`}>
 				<p className='font-bold'>{skills[skillPosition].skill}</p>

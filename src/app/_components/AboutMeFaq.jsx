@@ -59,7 +59,7 @@ function AboutMeFaq() {
 	}
 
 	return (
-		<section className='grid gap-10 mt-5 bg-primary-black text-primary-grey  py-6 px-4'>
+		<section className='grid gap-10 mt-10 bg-primary-black text-primary-grey  py-6 px-4'>
 			{aboutMeFaq.map((faq) => (
 				<div
 					className='border-b-primary-grey border-b rounded-2xl pl-4'

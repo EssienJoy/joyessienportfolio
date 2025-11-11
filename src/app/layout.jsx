@@ -4,6 +4,9 @@ import { Toaster } from "react-hot-toast";
 
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
+import { ToggleModeProvider } from "./_components/ToggleModeContext";
+import { ToggleProvider } from "./_components/ToggleMenuContext";
+import MobileNavbar from "./_components/MobileNavbar";
 
 const spaceGrotesk = Space_Grotesk({
 	weight: ["400", "500", "600", "700"],
@@ -19,16 +22,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body className={`${spaceGrotesk.className} `}>
-				<Header />
-
-				<div className='line-layout max-w-[var(--container--main)] mx-auto '>
-					<main>{children}</main>
-					<footer className='bg-primary-black text-primary-grey py-6 mt-6'>
-						<Footer />
-					</footer>
-				</div>
-				<Toaster />
+			<body
+				className={`${spaceGrotesk.className} dark:bg-primary-darkmode-black dark:text-primary-white bg-primary-grey text-primary-black`}>
+				<ToggleProvider>
+					<ToggleModeProvider>
+						<MobileNavbar />
+						<div className='line-layout max-w-[var(--container--main)] mx-auto '>
+							<Header />
+							<main>{children}</main>
+							<Footer />
+						</div>
+						<Toaster />
+					</ToggleModeProvider>
+				</ToggleProvider>
 			</body>
 		</html>
 	);

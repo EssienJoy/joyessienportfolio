@@ -1,17 +1,21 @@
+"use cache";
+
 import { DiGithubBadge } from "react-icons/di";
 
 import Link from "@/app/_ui/Link";
 import ProjectsList from "./ProjectsList";
 import OtherProjects from "./OtherProjects";
 
-function Projects() {
+async function Projects() {
+	const res = await fetch("http://localhost:3000/api/projects");
+	const projects = await res.json();
 	return (
 		<section id='projects' className='py-5 px-[var(--spacing-padding-inline)] '>
 			<h2 className=' text-3xl sm:text-4xl font-medium text-center  my-5'>
 				Projects
 			</h2>
 
-			<ProjectsList />
+			<ProjectsList projects={projects} />
 
 			<OtherProjects />
 

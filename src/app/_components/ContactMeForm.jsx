@@ -58,7 +58,7 @@ function ContactMeForm() {
 					name='message'
 					rows='5'
 					placeholder=' message'
-					className='w-full px-4 py-3 rounded-xl border-primary-black border-solid border focus:outline-none focus:ring-2 focus:ring-primary-grey'></textarea>
+					className='w-full px-4 py-3 rounded-xl dark:border-primary-white border-primary-black border-solid border focus:outline-none focus:ring-2 focus:ring-primary-grey'></textarea>
 				<ValidationError
 					prefix='Message'
 					field='message'
@@ -68,7 +68,7 @@ function ContactMeForm() {
 
 			<button
 				type='submit'
-				className='text-sm sm:text-lg w-full cursor-pointer bg-primary-black text-primary-grey font-medium py-5  rounded-xl'
+				className='text-sm sm:text-lg w-full cursor-pointer dark:bg-primary-grey dark:text-primary-black bg-primary-black text-primary-grey font-medium py-5  rounded-xl'
 				disabled={state.submitting}>
 				{state.submitting ? "Submitting..." : "Submit"}
 			</button>

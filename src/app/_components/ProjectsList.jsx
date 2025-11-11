@@ -1,16 +1,15 @@
 import Image from "next/image";
 import { HiOutlineChevronRight } from "react-icons/hi";
 
-import { projects } from "@/app/_data/projectDetails";
 import Link from "@/app/_ui/Link";
 import ProjectSocials from "@/app/_components/ProjectSocials";
 
-function ProjectsList() {
+function ProjectsList({ projects }) {
 	return (
 		<section className='mt-4 '>
 			{projects?.map((project) => (
 				<div
-					className='grid lg:grid-cols-2 gap-6 p-3 sm:p-6 border-primary-black  border-solid border rounded-2xl mb-10'
+					className='grid lg:grid-cols-2 gap-6 p-3 sm:p-6 dark:border-[#424242] border-primary-black  border-solid border rounded-2xl mb-10'
 					key={project.id}>
 					<section className='bg-[#cbcbcb] backdrop-blur-[2px] shadow-2xl rounded-3xl  p-3 sm:p-5'>
 						<figure className='relative  h-[250px] sm:h-[350px]'>
@@ -20,7 +19,6 @@ function ProjectsList() {
 								fill
 								className='object-cover object-top rounded-2xl'
 								alt={project.title + " Image"}
-								placeholder='blur'
 							/>
 						</figure>
 					</section>

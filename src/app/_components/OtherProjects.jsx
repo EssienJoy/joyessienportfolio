@@ -36,7 +36,7 @@ export default function OtherProjects() {
 							</Link>
 						</div>
 
-						<div className=' grid grid-cols-2 gap-3 p-5 border backdrop-blur-[2px] border-[#cbcbcb] rounded-b-3xl'>
+						<div className=' grid grid-cols-2 gap-3 p-5 border backdrop-blur-[2px] dark:border-[#424242] border-[#cbcbcb] rounded-b-3xl'>
 							{project.stack.map((stack, idx) => (
 								<p
 									key={idx}
