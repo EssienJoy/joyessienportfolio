@@ -4,7 +4,7 @@ const nextConfig = {
   
     webpack: (config) => {
         return config;
-    },
+    }, turbopack: {},
     experimental: {
         cacheComponents: true,
     }
