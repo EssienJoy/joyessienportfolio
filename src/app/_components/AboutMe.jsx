@@ -1,9 +1,11 @@
 import MuxPlayer from "@mux/mux-player-react";
+import { Suspense } from "react";
 
 import AboutMeFaq from "@/app/_components/AboutMeFaq";
 import PhoneFrame from "@/app/_components/PhoneFrame";
 
 import { getBlurredPlaceholder } from "../_services/apidata";
+import Spinner from "./Spinner";
 
 async function AboutMe() {
 	const options = {};
@@ -20,17 +22,19 @@ async function AboutMe() {
 				About me
 			</h2>
 
-			<PhoneFrame>
-				<MuxPlayer
-					streamType='on-demand'
-					playbackId={muxPlaybackId}
-					metadataVideoTitle='Portfolio Video'
-					thumbnailTime='2'
-					className='w-full  video'
-					placeholder={blurDataURL}
-					style={{ aspectRatio }}
-				/>
-			</PhoneFrame>
+			<Suspense fallback={<Spinner />}>
+				<PhoneFrame>
+					<MuxPlayer
+						streamType='on-demand'
+						playbackId={muxPlaybackId}
+						metadataVideoTitle='Portfolio Video'
+						thumbnailTime='2'
+						className='w-full  video'
+						placeholder={blurDataURL}
+						style={{ aspectRatio }}
+					/>
+				</PhoneFrame>
+			</Suspense>
 			<AboutMeFaq />
 		</section>
 	);

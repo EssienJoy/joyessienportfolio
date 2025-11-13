@@ -10,7 +10,7 @@ function Link({
 }) {
 	return (
 		<AriaLink
-			className={`link text-sm  sm:text-lg   flex gap-4 items-center rounded-2xl px-[${paddingInline}] border border-solid border-primary-black  text-primary-black bg-transparent font-medium relative transition-all overflow-hidden hover:text-primary-grey  ${className}`}
+			className={`link text-sm  sm:text-lg   flex gap-4 items-center rounded-2xl px-[${paddingInline}] border border-solid dark:border-primary-white dark:text-primary-white border-primary-black  text-primary-black bg-transparent font-medium relative transition-all overflow-hidden hover:text-primary-grey dark:hover:text-primary-black  ${className}`}
 			style={{
 				paddingInline,
 				paddingBlock,
