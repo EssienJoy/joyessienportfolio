@@ -7,7 +7,8 @@ import ProjectsList from "./ProjectsList";
 import OtherProjects from "./OtherProjects";
 
 async function Projects() {
-	const res = await fetch("http://localhost:3000/api/projects");
+	const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+	const res = await fetch(`${baseUrl}/api/projects`);
 	const projects = await res.json();
 	return (
 		<section id='projects' className='py-5 px-[var(--spacing-padding-inline)] '>
