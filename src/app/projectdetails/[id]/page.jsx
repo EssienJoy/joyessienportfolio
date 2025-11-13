@@ -1,4 +1,3 @@
-'use cache'
 import Image from "next/image";
 
 import ProjectOverview from "@/app/projectdetails/[id]/_components/ProjectOverview";
@@ -7,7 +6,7 @@ import ProjectArrowBack from "@/app/projectdetails/[id]/_components/ProjectArrow
 import ProjectNavigation from "@/app/projectdetails/[id]/_components/ProjectNavigation";
 import ProjectSocials from "@/app/_components/ProjectSocials";
 import ProjectFeatures from "@/app/projectdetails/[id]/_components/ProjectFeatures";
-import { projects } from "@/app/api/projects/projects";
+import { projects } from "@/app/_data/projectDetails";
 
 async function page({ params }) {
 	const { id } = await params;
