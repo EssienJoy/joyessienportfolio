@@ -30,7 +30,7 @@ export default function OtherProjects() {
 										fill
 										className='object-cover object-top rounded-2xl'
 										alt={`${project.title} screenshot`}
-										placeholder='blur'
+									
 									/>
 								</figure>
 							</Link>
