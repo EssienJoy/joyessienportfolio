@@ -1,10 +1,13 @@
 @import "tailwindcss";
 @tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-primary-grey: #E8EAEC;
   --color-primary-black: #000;
   --color-primary-white: #fff;
+
+  --color-primary-darkmode-black: #18181B;
 
   /* Background color */
   --color-body-bg: var(--color-primary-grey);
@@ -16,7 +19,7 @@
   --container--main: 64rem;
 
   /* Padding Inline */
-  --spacing-padding-inline: 8px;
+  --spacing-padding-inline: 1rem;
 
   /* Blur bg */
   --backdrop-blur: #cbcbcb;
@@ -30,8 +33,81 @@
     aspect-ratio: 1;
     border-radius: 50%;
     border: 8px solid var(--color-border-primary);
-    border-right-color: var(--color-border-primary);
+    border-right-color: var(--color-primary-black);
     animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  .line-layout {
+    border-left: 1px solid var(--color-border-primary);
+    border-right: 1px solid var(--color-border-primary);
+  }
+
+  .dark .line-layout {
+    border-left: 1px solid #424242;
+    border-right: 1px solid #424242
+  }
+
+  .video {
+    --media-object-fit: cover;
+  }
+
+
+  .link {
+    position: relative;
+    color: var(--color-primary-black);
+    transition: color 0.3s;
+  }
+
+  .link:hover {
+    color: var(--color-primary-white);
+  }
+
+  /* Dark mode link */
+  .dark .link {
+    color: var(--color-primary-white);
+  }
+
+  .dark .link:hover {
+    color: var(--color-primary-black);
+  }
+
+  .link::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: var(--color-primary-black);
+    z-index: -1;
+    transition: all 1s;
+  }
+
+  .dark .link::before {
+    background-color: var(--color-primary-white);
+  }
+
+  .link:hover::before {
+    width: 160%;
+  }
+
+  @keyframes gradient-calm {
+
+    0%,
+    100% {
+      background-position: 50% -20%;
+    }
+
+    50% {
+      background-position: 52% -18%;
+    }
   }
 }
 
@@ -39,50 +115,7 @@ html {
   scroll-behavior: smooth;
 }
 
-
-body {
-  background-color: var(--color-body-bg);
-  color: var(--color-primary-black);
-}
-
-.line-layout {
-  border-left: 1px solid var(--color-border-primary);
-  border-right: 1px solid var(--color-border-primary);
-}
-
-.video {
-  --media-object-fit: cover;
-}
-
-.link:hover {
-  color: white;
-}
-
-.link::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 0%;
-  top: 0;
-  left: -40px;
-  transform: skewX(45deg);
-  background-color: var(--color-primary-black);
-  z-index: -1;
-  transition: all 1s;
-}
-
-.link:hover::before {
-  width: 160%;
-}
-
-@keyframes gradient-calm {
-
-  0%,
-  100% {
-    background-position: 50% -20%;
-  }
-
-  50% {
-    background-position: 52% -18%;
-  }
+button,
+a {
+  cursor: pointer;
 }
