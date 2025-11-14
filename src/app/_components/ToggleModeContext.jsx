@@ -5,38 +5,31 @@ import { createContext, useContext, useState, useEffect } from "react";
 const ToggleModeContext = createContext();
 
 function ToggleModeProvider({ children }) {
-	const [mode, setMode] = useState("light");
+	const [mode, setMode] = useState(() => {
+		if (typeof window !== "undefined") {
+			const storedTheme = localStorage.getItem("theme");
+			if (storedTheme) return storedTheme;
 
-	// Load theme preference from localStorage or system preference
-	useEffect(() => {
-		const storedTheme = localStorage.getItem("theme");
-		if (storedTheme) {
-			setMode(storedTheme);
-		} else {
 			const prefersDark = window.matchMedia(
 				"(prefers-color-scheme: dark)"
 			).matches;
-			setMode(prefersDark ? "dark" : "light");
+			return prefersDark ? "dark" : "light";
 		}
-	}, []);
+		return "light";
+	});
 
-	// Apply theme to document and persist
 	useEffect(() => {
-		if (!mode) return;
+		localStorage.setItem("theme", mode);
+		document.cookie = `themeMode=${mode}; path=/; max-age=31536000`;
 
 		const htmlEl = document.documentElement;
-
 		if (mode === "dark") {
 			htmlEl.classList.add("dark");
 		} else {
 			htmlEl.classList.remove("dark");
 		}
-
-		localStorage.setItem("theme", mode);
-		document.cookie = `themeMode=${mode}; path=/; max-age=31536000`;
 	}, [mode]);
 
-	// Toggle function
 	function toggleMode() {
 		setMode((prev) => (prev === "light" ? "dark" : "light"));
 	}

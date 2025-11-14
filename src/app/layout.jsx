@@ -7,6 +7,7 @@ import Header from "./_components/Header";
 import { ToggleModeProvider } from "./_components/ToggleModeContext";
 import { ToggleProvider } from "./_components/ToggleMenuContext";
 import MobileNavbar from "./_components/MobileNavbar";
+import { cookies } from "next/headers";
 
 const spaceGrotesk = Space_Grotesk({
 	weight: ["400", "500", "600", "700"],
@@ -19,9 +20,13 @@ export const metadata = {
 	description: "Frontend developer portfolio",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+
+	const cookieStore = await cookies();
+	const theme = cookieStore.get("themeMode")?.value || "light";
+
 	return (
-		<html lang='en'>
+		<html lang='en' className={`${theme}`}>
 			<body
 				className={`${spaceGrotesk.className} dark:bg-primary-darkmode-black dark:text-primary-white bg-primary-grey text-primary-black`}>
 				<ToggleProvider>
