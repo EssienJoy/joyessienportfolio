@@ -32,12 +32,12 @@ function AboutMeFaq() {
 							{openId === faq.id ? (
 								<FaTimes
 									size='1.5rem'
-									className='shrink-0 text-primary-black dark:text-primary'
+									className='shrink-0 text-primary-black dark:text-primary-white'
 								/>
 							) : (
 								<TiPlus
 									size='1.5rem'
-									className='shrink-0 text-primary-black dark:text-primary'
+									className='shrink-0 text-primary-black dark:text-primary-white'
 								/>
 							)}
 						</Button>
