@@ -20,13 +20,11 @@ export const projects = [
             "Used Next Image optimization for performance and fast image loading",
             "Deployed on Vercel for fast and reliable hosting"
         ],
-        features: [
-            {
-                problem: "Users need a seamless shopping experience for audio gadgets",
-                solution:
-                    "Built an intuitive product browsing and checkout experience with cart persistence and responsive layouts",
-            },
-        ],
+
+        problem: "Users need a seamless shopping experience for audio gadgets",
+        solution:
+            "Built an intuitive product browsing and checkout experience with cart persistence and responsive layouts",
+
         stack: ["Next.js", "Tailwind CSS", "Convex"],
         github: "https://github.com/EssienJoy/audiophile",
         live: "https://audiophile-vxux.vercel.app/",
@@ -49,13 +47,10 @@ export const projects = [
             "Added React Hot Toast for real-time notifications",
             "Simulated authentication with JSON Server (fake auth for demonstration purposes)",
         ],
-        features: [
-            {
-                problem: "Users struggling to complete a task",
-                solution: "Create Plans,Track goals,Countdown and reminders",
-                video: process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID_PLANNER_FEAT
-            },
-        ],
+
+        problem: "Users struggling to complete a task",
+        solution: "Create Plans,Track goals,Countdown and reminders",
+
         stack: ["Styled Components", "React"],
         github: "https://github.com/EssienJoy/planner",
         live: "https://planner-six-chi.vercel.app/",
@@ -76,12 +71,10 @@ export const projects = [
             "Implemented cart preview interactions for better shopping flow",
             "Designed with user-friendly navigation to simulate a real store experience",
         ],
-        features: [
-            {
-                problem: "Users want the joy of window shopping without leaving home",
-                solution: "Interactive product browsing and clean UI design",
-            },
-        ],
+
+        problem: "Users want the joy of window shopping without leaving home",
+        solution: "Interactive product browsing and clean UI design",
+
         stack: ["Tailwind CSS", "JavaScript"],
         github: "https://github.com/EssienJoy/eazymart",
         live: "/wip",
@@ -101,13 +94,10 @@ export const projects = [
             "Focused on aesthetic design with smooth color transitions",
             "Ensured cross-device responsiveness and accessibility",
         ],
-        features: [
-            {
-                problem: "Banking apps often feel clunky and outdated",
-                solution: "A modern, responsive static site with clean UI and clear structure",
-                video: process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID_MYAZA_FEAT
-            },
-        ],
+
+        problem: "Banking apps often feel clunky and outdated",
+        solution: "A modern, responsive static site with clean UI and clear structure",
+
         stack: ["HTML", "CSS", "JavaScript"],
         github: "https://github.com/EssienJoy/myazaClone",
         live: "https://myaza-clone.vercel.app/",

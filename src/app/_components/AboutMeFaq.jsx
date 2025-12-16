@@ -2,54 +2,10 @@
 
 import { useState } from "react";
 
-import Button from "@/app/_ui/Button";
+import Button from "@/app/_components/_ui/Button";
 import { FaTimes } from "react-icons/fa";
 import { TiPlus } from "react-icons/ti";
-
-const aboutMeFaq = [
-	{
-		id: 1,
-		question: "Who am I?",
-		answer:
-			"Hi, I’m Essien Joy  a self-taught, entry-level frontend web developer.",
-	},
-	{
-		id: 2,
-		question: "How long have I been in tech?",
-		answer:
-			"I’ve been on my tech journey for about a year, and I’ve been documenting it online for 340 days.",
-	},
-	{
-		id: 3,
-		question: "What do I do?",
-		answer:
-			"I design and develop responsive, modern web interfaces using HTML, CSS, JavaScript, Tailwind CSS, Sass, Supabase, Git, GitHub, React, and Next.js.",
-	},
-	{
-		id: 4,
-		question: "What inspires me?",
-		answer:
-			"I’m inspired by solving problems with code and creating sleek, interactive designs that people enjoy using.",
-	},
-	{
-		id: 5,
-		question: "What am I learning?",
-		answer:
-			"I’m currently diving deeper into React and exploring Next.js for full-stack development.",
-	},
-	{
-		id: 6,
-		question: "What’s my goal?",
-		answer:
-			"My goal is to grow into a well-rounded frontend engineer and contribute to impactful projects that make a difference.",
-	},
-	{
-		id: 7,
-		question: "What’s my personality outside tech?",
-		answer:
-			"Outside of tech, I enjoy creating content — which is what inspired me to share my journey online. I also have a passion for fashion and makeup.",
-	},
-];
+import { aboutMeFaq } from "../_constants/data";
 
 function AboutMeFaq() {
 	const [openId, setOpenId] = useState(null);
@@ -59,10 +15,10 @@ function AboutMeFaq() {
 	}
 
 	return (
-		<section className='grid gap-10 mt-5 bg-primary-black text-primary-grey  py-6 px-4'>
+		<section className='grid gap-10 mt-5   py-6 '>
 			{aboutMeFaq.map((faq) => (
 				<div
-					className='border-b-primary-grey border-b rounded-2xl pl-4'
+					className='border-b-primary-black dark:border-b-primary border-b rounded-2xl pl-4'
 					key={faq.id}>
 					<div
 						className='flex justify-between  items-center cursor-pointer'
@@ -73,7 +29,7 @@ function AboutMeFaq() {
 						</h2>
 
 						<Button
-							className='p-3 text-primary-grey'
+							className='p-3 text-primary '
 							onClick={() => handleOpen(faq.id)}>
 							{openId === faq.id ? (
 								<FaTimes size='1.5rem' className='shrink-0' />

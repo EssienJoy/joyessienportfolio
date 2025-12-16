@@ -3,26 +3,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary-grey: #E8EAEC;
-  --color-primary-black: #000;
+  /* #DA6DFA */
+  --color-primary: #d96dfa4c;
+  --color-primary-black: #08001a;
   --color-primary-white: #fff;
-
-  --color-primary-darkmode-black: #18181B;
-
-  /* Background color */
-  --color-body-bg: var(--color-primary-grey);
-
-  /* Border Color */
-  --color-border-primary: #d4d3d3;
-
-  /* Layout  */
-  --container--main: 64rem;
-
-  /* Padding Inline */
-  --spacing-padding-inline: 1rem;
-
-  /* Blur bg */
-  --backdrop-blur: #cbcbcb;
 
 }
 
@@ -69,15 +53,15 @@
   }
 
   /* Dark mode link */
-  .dark .link {
+  /* .dark .link {
     color: var(--color-primary-white);
   }
 
   .dark .link:hover {
     color: var(--color-primary-black);
-  }
+  } */
 
-  .link::before {
+  /* .link::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -108,7 +92,7 @@
     50% {
       background-position: 52% -18%;
     }
-  }
+  } */
 }
 
 html {

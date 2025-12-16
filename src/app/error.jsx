@@ -1,7 +1,7 @@
 "use client";
 import { notFound } from "next/navigation";
 
-import Button from "@/app/_ui/Button";
+import Button from "@/app/_components/_ui/Button";
 
 export default function Error({ error }) {
 	// const router = useRouter();
@@ -11,7 +11,7 @@ export default function Error({ error }) {
 			<p className='text-lg'>{error.message}</p>
 
 			<Button
-				className='bg-black text-2xl rounded-2xl text-primary-grey py-3 px-6'
+				className='dark:bg-primary bg-primary-black text-2xl rounded-2xl py-3 px-6'
 				onClick={notFound}>
 				Try again
 			</Button>

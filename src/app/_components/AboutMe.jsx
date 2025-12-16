@@ -1,42 +1,26 @@
-import MuxPlayer from "@mux/mux-player-react";
-import { Suspense } from "react";
-
 import AboutMeFaq from "@/app/_components/AboutMeFaq";
-import PhoneFrame from "@/app/_components/PhoneFrame";
-
-import { getBlurredPlaceholder } from "../_services/apidata";
-import Spinner from "./Spinner";
+import Container from "./Container";
+import Link from "next/link";
 
 async function AboutMe() {
-	const options = {};
-	const muxPlaybackId = process.env.NEXT_PUBLIC_MUX_PLAYBACK_ID_PORTFOLIO_VIDEO;
-
-	const { blurDataURL, aspectRatio } = await getBlurredPlaceholder(
-		muxPlaybackId,
-		options
-	);
-
 	return (
-		<section id='aboutme' className='py-5'>
-			<h2 className='text-3xl sm:text-4xl font-medium text-center mb-6'>
-				About me
-			</h2>
+		<Container id='aboutme' className='my-20'>
+			<h2 className='text-3xl sm:text-5xl font-bold my-6'>About me</h2>
 
-			<Suspense fallback={<Spinner />}>
-				<PhoneFrame>
-					<MuxPlayer
-						streamType='on-demand'
-						playbackId={muxPlaybackId}
-						metadataVideoTitle='Portfolio Video'
-						thumbnailTime='2'
-						className='w-full  video'
-						placeholder={blurDataURL}
-						style={{ aspectRatio }}
-					/>
-				</PhoneFrame>
-			</Suspense>
+			<p className='text-4xl sm:text-5xl md:text-7xl uppercase font-bold my-20'>
+				Explore the FAQs to <br className='hidden sm:block' /> learn more about
+				me
+			</p>
+
 			<AboutMeFaq />
-		</section>
+			<p className='my-5 text-center sm:text-right'>
+				Feel free to send me an{" "}
+				<Link className=' underline dark:text-primary-white' href='/contact-me'>
+					email
+				</Link>{" "}
+				if you have any questions or opportunities to discuss.
+			</p>
+		</Container>
 	);
 }
 

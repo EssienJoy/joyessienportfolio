@@ -8,7 +8,7 @@ function MobileMenuButton() {
 
 	return (
 		<button
-			className='sm:hidden flex items-center rounded-full bg-primary-white px-4 py-2 text-sm font-medium text-primary-black shadow-lg '
+			className='sm:hidden flex gap-1 items-center rounded-full bg-primary-black dark:bg-primary text-primary-white px-4 py-1 sm:py-2 text-sm font-medium  shadow-lg '
 			type='button'
 			onClick={toggleMenuTrue}>
 			Menu

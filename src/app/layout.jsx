@@ -21,22 +21,19 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-
 	const cookieStore = await cookies();
 	const theme = cookieStore.get("themeMode")?.value || "light";
 
 	return (
 		<html lang='en' className={`${theme}`}>
 			<body
-				className={`${spaceGrotesk.className} dark:bg-primary-darkmode-black dark:text-primary-white bg-primary-grey text-primary-black`}>
+				className={`overflow-x-hidden ${spaceGrotesk.className} text-[1rem] dark:bg-[#08001a] dark:text-primary-white bg-[#f7e8fc] text-black`}>
 				<ToggleProvider>
 					<ToggleModeProvider>
 						<MobileNavbar />
-						<div className='line-layout max-w-[var(--container--main)] mx-auto '>
-							<Header />
-							<main>{children}</main>
-							<Footer />
-						</div>
+						<Header />
+						<main>{children}</main>
+						<Footer />
 						<Toaster />
 					</ToggleModeProvider>
 				</ToggleProvider>

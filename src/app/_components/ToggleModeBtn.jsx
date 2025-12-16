@@ -10,7 +10,7 @@ function ToggleModeBtn() {
 	return (
 		<button
 			onClick={toggleMode}
-			className={` flex items-center justify-center w-12 h-12 rounded-full border-2 border-primary-white transition-all duration-500
+			className={`  flex items-center justify-center w-7 h-7 rounded-full border border-primary-black dark:border-primary-white transition-all duration-500
         ${
 					mode === "dark"
 						? "bg-primary-black  text-primary-white"
@@ -18,9 +18,9 @@ function ToggleModeBtn() {
 				}
         scale-105`}>
 			{mode === "dark" ? (
-				<IoSunnyOutline size='1.6rem' />
+				<IoSunnyOutline size='1rem' />
 			) : (
-				<LuMoonStar size='1.6rem' />
+				<LuMoonStar size='1rem' />
 			)}
 		</button>
 	);

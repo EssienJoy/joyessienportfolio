@@ -18,7 +18,7 @@ export default function OtherProjects() {
 					<li
 						key={i}
 						className='self-start flex flex-col rounded-3xl shadow-2xl overflow-hidden'>
-						<div className='bg-[#cbcbcb] backdrop-blur-[2px] p-4 lg:p-8'>
+						<div className='dark:bg-primary bg-primary-black backdrop-blur-[2px] p-4 lg:p-8'>
 							<Link
 								href={project.link}
 								target='_blank'
@@ -30,7 +30,6 @@ export default function OtherProjects() {
 										fill
 										className='object-cover object-top rounded-2xl'
 										alt={`${project.title} screenshot`}
-									
 									/>
 								</figure>
 							</Link>
@@ -40,7 +39,7 @@ export default function OtherProjects() {
 							{project.stack.map((stack, idx) => (
 								<p
 									key={idx}
-									className='text-center border border-primary-black p-2 bg-black text-primary-grey '>
+									className='text-center text-primary-white bg-primary-black p-2 dark:bg-primary'>
 									{stack}
 								</p>
 							))}

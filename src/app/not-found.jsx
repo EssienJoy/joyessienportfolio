@@ -1,4 +1,4 @@
-import Link from "@/app/_ui/Link";
+import Link from "@/app/_components/_ui/Link";
 
 function NotFound() {
 	return (

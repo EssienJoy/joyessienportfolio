@@ -1,34 +1,33 @@
-import { skills } from "../_data/skills";
+import { skills } from "../_constants/data";
+import Container from "./Container";
 
 function Skills() {
 	return (
-		<section
+		<Container
 			id='skills'
-			className='px-[var(--spacing-padding-inline)]  my-5 text-primary-black dark:text-primary-white'>
-			<h2 className=' text-3xl sm:text-4xl font-medium text-center  mb-10'>
-				Skills
-			</h2>
+			className=' my-25 text-primary-black dark:text-primary-white'>
+			<h2 className='text-3xl sm:text-5xl font-bold mb-6'>Skills</h2>
 
-			<ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 '>
-				{skills.map((skill, index) => {
+			<ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 my-10'>
+				{skills.map((skill) => {
 					const IconComponent = skill.icon;
 					return (
 						<li
-							key={index}
-							className='bg-primary-black dark:bg-primary-white text-primary-grey dark:text-primary-black flex flex-col items-center w-full gap-6 h-40 mx-auto py-3  justify-center shadow-lg rounded-lg'>
+							key={skill.skill}
+							className='hover:scale-105 cursor-pointer border-primary-black dark:border-primary border border-solid text-primary-black dark:text-primary-white flex  items-center w-full gap-3  px-6 py-3  rounded-2xl'>
 							<p className='font-bold'>{skill.skill}</p>
 							{IconComponent && (
 								<IconComponent
-									size='3rem'
+									size='2rem'
 									style={{ color: skill.color }}
-									className='transition-transform duration-500 group-hover:scale-110'
+									className='transition-transform duration-500 group-hover:scale-110 shrink-0'
 								/>
 							)}
 						</li>
 					);
 				})}
 			</ul>
-		</section>
+		</Container>
 	);
 }
 

@@ -1,12 +1,11 @@
 import { DiGithubBadge } from "react-icons/di";
 
-import Link from "@/app/_ui/Link";
+import Link from "@/app/_components/_ui/Link";
 import ProjectsList from "./ProjectsList";
 import OtherProjects from "./OtherProjects";
 import { projects } from "../_data/projectDetails";
 
 async function Projects() {
-
 	return (
 		<section id='projects' className='py-5 px-[var(--spacing-padding-inline)] '>
 			<h2 className=' text-3xl sm:text-4xl font-medium text-center  my-5'>

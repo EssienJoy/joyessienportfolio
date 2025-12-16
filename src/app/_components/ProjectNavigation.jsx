@@ -1,4 +1,4 @@
-import Link from "@/app/_ui/Link";
+import Link from "@/app/_components/_ui/Link";
 
 function ProjectNavigation({ project, projectLength }) {
 	return (
@@ -17,7 +17,7 @@ function ProjectNavigation({ project, projectLength }) {
 			{project.id < projectLength && (
 				<Link
 					className='text-sm sm:text-lg'
-					href={`/projectdetails/${project.id + 1}  `}
+					href={`/projects/${project.id + 1}  `}
 					prefetch>
 					Next
 				</Link>

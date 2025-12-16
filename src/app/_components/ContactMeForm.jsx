@@ -3,9 +3,9 @@
 import { useForm, ValidationError } from "@formspree/react";
 import { useRouter } from "next/navigation";
 
-import Input from "@/app/_ui/Input";
-import Label from "@/app/_ui/Label";
-import TextField from "@/app/_ui/TextField";
+import Input from "@/app/_components/_ui/Input";
+import Label from "@/app/_components/_ui/Label";
+import TextField from "@/app/_components/_ui/TextField";
 
 function ContactMeForm() {
 	const router = useRouter();
@@ -58,7 +58,7 @@ function ContactMeForm() {
 					name='message'
 					rows='5'
 					placeholder=' message'
-					className='w-full px-4 py-3 rounded-xl dark:border-primary-white border-primary-black border-solid border focus:outline-none focus:ring-2 focus:ring-primary-grey'></textarea>
+					className='w-full px-4 py-3 rounded-xl dark:text-primary-white dark:border-primary border-primary-black border-solid border focus:outline-none focus:ring-2 focus:ring-primary-grey'></textarea>
 				<ValidationError
 					prefix='Message'
 					field='message'
@@ -68,7 +68,7 @@ function ContactMeForm() {
 
 			<button
 				type='submit'
-				className='text-sm sm:text-lg w-full cursor-pointer dark:bg-primary-grey dark:text-primary-black bg-primary-black text-primary-grey font-medium py-5  rounded-xl'
+				className='text-sm sm:text-lg w-full cursor-pointer bg-primary-black dark:bg-primary text-primary-white font-medium py-5  rounded-xl'
 				disabled={state.submitting}>
 				{state.submitting ? "Submitting..." : "Submit"}
 			</button>

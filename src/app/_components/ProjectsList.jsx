@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { HiOutlineChevronRight } from "react-icons/hi";
-
-import Link from "@/app/_ui/Link";
-import ProjectSocials from "@/app/_components/ProjectSocials";
+import Link from "@/app/_components/_ui/Link";
+import { HiLink } from "react-icons/hi";
+import { DiGithubBadge } from "react-icons/di";
 
 function ProjectsList({ projects }) {
 	return (
@@ -11,7 +11,7 @@ function ProjectsList({ projects }) {
 				<div
 					className='grid lg:grid-cols-2 gap-6 p-3 sm:p-6 dark:border-[#424242] border-primary-black  border-solid border rounded-2xl mb-10'
 					key={project.id}>
-					<section className='bg-[#cbcbcb] backdrop-blur-[2px] shadow-2xl rounded-3xl  p-3 sm:p-5'>
+					<section className='dark:bg-primary bg-primary-black backdrop-blur-[2px] shadow-2xl rounded-3xl  p-3 sm:p-5'>
 						<figure className='relative  h-[250px] sm:h-[350px]'>
 							<Image
 								src={project?.image}
@@ -33,18 +33,35 @@ function ProjectsList({ projects }) {
 							{project.stack.slice(0, 2).map((stack, index) => (
 								<p
 									key={index}
-									className='sm:w-full border-primary-black border border-solid p-2 bg-black text-primary-grey'>
+									className='sm:w-full p-2 bg-black dark:bg-primary text-primary-white'>
 									{stack}
 								</p>
 							))}
 						</div>
 
 						<div className='grid gap-4 '>
-							<ProjectSocials project={project} />
+							<div className='grid grid-cols-2 gap-4'>
+								<Link
+									href={project.live}
+									target='_blank'
+									className='gap-2'
+									rel='noopener noreferrer'>
+									<span>Live</span>
+									<HiLink size='1.5rem' />
+								</Link>
+								<Link
+									className='gap-2'
+									href={project.github}
+									target='_blank'
+									rel='noopener noreferrer'>
+									<span> GitHub</span>{" "}
+									<DiGithubBadge className='shrink-0' size='1.5rem' />
+								</Link>
+							</div>
 
 							<Link
-								className=' justify-center'
-								href={`/projectdetails/${project.id}`}>
+								className=' justify-center gap-1 hover:gap-3'
+								href={`/projects/${project.id}`}>
 								<span>Project Details</span>
 								<HiOutlineChevronRight size='1.5rem' />
 							</Link>

@@ -1,7 +1,7 @@
 "use client";
 
 import { IoIosArrowDown } from "react-icons/io";
-import Button from "../_ui/Button";
+import Button from "./_ui/Button";
 
 function ToggleOtherProjects({ setExpanded, expanded }) {
 	function toggleProjects() {

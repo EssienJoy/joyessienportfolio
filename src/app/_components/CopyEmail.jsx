@@ -15,7 +15,7 @@ export default function EmailCopy() {
 		<button
 			onClick={handleCopy}
 			aria-label='Copy Email'
-			className='cursor-pointer'>
+			className='cursor-pointer '>
 			<BiLogoGmail size='2rem' />
 		</button>
 	);
