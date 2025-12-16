@@ -15,7 +15,9 @@ function ToggleOtherProjects({ setExpanded, expanded }) {
 				className='flex items-center gap-2 border text-md sm:text-lg border-primary-black py-2 px-3 rounded-xl bg-black text-primary-grey '
 				onClick={toggleProjects}>
 				<IoIosArrowDown
-					className={`transition-transform ${expanded ? "rotate-180" : ""}`}
+					className={`bg-primary-black dark:bg-primary transition-transform ${
+						expanded ? "rotate-180" : ""
+					}`}
 				/>
 				<span>{expanded ? "Show Less" : "Show More"}</span>
 			</Button>

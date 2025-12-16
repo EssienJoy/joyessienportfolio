@@ -6,7 +6,7 @@ function ProjectNavigation({ project, projectLength }) {
 			{project.id > 1 && (
 				<Link
 					className='text-sm sm:text-lg'
-					href={`/projectdetails/${project.id - 1}`}
+					href={`/projects/${project.id - 1}`}
 					prefetch>
 					Prev
 				</Link>

@@ -13,7 +13,7 @@ function Hero() {
 			</h1>
 			<section className='lg:w-[80%] mx-auto   grid place-items-center '>
 				<h2 className={`text-3xl sm:text-5xl font-medium sm:text-center`}>
-					Hi, I’m Essien Joy.
+					✨ Hi, I’m Essien Joy.
 				</h2>
 
 				<p className='my-8 text-lg  sm:text-2xl  lg:w-[80%] sm:text-center mx-auto'>

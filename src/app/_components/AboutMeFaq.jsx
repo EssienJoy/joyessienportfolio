@@ -21,7 +21,7 @@ function AboutMeFaq() {
 					className='border-b-primary-black dark:border-b-primary border-b rounded-2xl pl-4'
 					key={faq.id}>
 					<div
-						className='flex justify-between  items-center cursor-pointer'
+						className='flex justify-between  items-center gap-3 cursor-pointer'
 						role='button'
 						onClick={() => handleOpen(faq.id)}>
 						<h2 className='text-lg sm:text-2xl font-medium pb-3 '>

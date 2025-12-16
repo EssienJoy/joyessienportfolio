@@ -45,8 +45,8 @@ export default async function RootLayout({ children }) {
 									fontSize: "16px",
 									maxWidth: "500px",
 									padding: "16px 24px",
-									border: "2px solid var(--color-primary-black)",
-									backgroundColor: "var(--color-primary-white)",
+									border: "1px solid var(--color-primary-black)",
+									backgroundColor: "#f7e8fc",
 									color: "var(--color-primary-black)",
 								},
 							}}
