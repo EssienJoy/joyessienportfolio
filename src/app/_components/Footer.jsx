@@ -7,7 +7,7 @@ function Footer() {
 	return (
 		<footer className=' text-primary-white py-6 mt-10 bg-primary-black dark:bg-primary'>
 			<Container className='' id='socials'>
-				<div className='flex justify-between gap-5 flex-wrap'>
+				<div className='flex justify-between gap-10 flex-wrap'>
 					<nav>
 						<h2 className='text-2xl font-bold  my-3 '>Quick Links</h2>
 						<ul>

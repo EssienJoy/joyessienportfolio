@@ -9,7 +9,7 @@ import { projects } from "../_data/projectDetails";
 export default async function Projects() {
 	return (
 		<Container id='projects' className='py-5'>
-			<h2 className='text-5xl sm:text-4xl font-bold  my-6'>Projects</h2>
+			<h2 className='text-3xl sm:text-5xl font-bold  my-6'>Projects</h2>
 
 			<ProjectsList projects={projects} />
 

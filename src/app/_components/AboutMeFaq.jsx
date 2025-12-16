@@ -28,13 +28,17 @@ function AboutMeFaq() {
 							{faq.question}
 						</h2>
 
-						<Button
-							className='p-3 text-primary '
-							onClick={() => handleOpen(faq.id)}>
+						<Button className='p-3 ' onClick={() => handleOpen(faq.id)}>
 							{openId === faq.id ? (
-								<FaTimes size='1.5rem' className='shrink-0' />
+								<FaTimes
+									size='1.5rem'
+									className='shrink-0 text-primary-black dark:text-primary'
+								/>
 							) : (
-								<TiPlus size='1.5rem' className='shrink-0' />
+								<TiPlus
+									size='1.5rem'
+									className='shrink-0 text-primary-black dark:text-primary'
+								/>
 							)}
 						</Button>
 					</div>

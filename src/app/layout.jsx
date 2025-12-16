@@ -34,7 +34,23 @@ export default async function RootLayout({ children }) {
 						<Header />
 						<main>{children}</main>
 						<Footer />
-						<Toaster />
+						<Toaster
+							position='top-center'
+							gutter={12}
+							containerStyle={{ margin: "8px" }}
+							toastOptions={{
+								success: { duration: 5000 },
+								error: { duration: 5000 },
+								style: {
+									fontSize: "16px",
+									maxWidth: "500px",
+									padding: "16px 24px",
+									border: "2px solid var(--color-primary-black)",
+									backgroundColor: "var(--color-primary-white)",
+									color: "var(--color-primary-black)",
+								},
+							}}
+						/>
 					</ToggleModeProvider>
 				</ToggleProvider>
 			</body>

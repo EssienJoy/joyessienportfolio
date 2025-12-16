@@ -3,7 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* #DA6DFA */
   --color-primary: #d96dfa4c;
   --color-primary-black: #08001a;
   --color-primary-white: #fff;
@@ -27,72 +26,6 @@
     }
   }
 
-  .line-layout {
-    border-left: 1px solid var(--color-border-primary);
-    border-right: 1px solid var(--color-border-primary);
-  }
-
-  .dark .line-layout {
-    border-left: 1px solid #424242;
-    border-right: 1px solid #424242
-  }
-
-  .video {
-    --media-object-fit: cover;
-  }
-
-
-  .link {
-    position: relative;
-    color: var(--color-primary-black);
-    transition: color 0.3s;
-  }
-
-  .link:hover {
-    color: var(--color-primary-white);
-  }
-
-  /* Dark mode link */
-  /* .dark .link {
-    color: var(--color-primary-white);
-  }
-
-  .dark .link:hover {
-    color: var(--color-primary-black);
-  } */
-
-  /* .link::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    top: 0;
-    left: -40px;
-    transform: skewX(45deg);
-    background-color: var(--color-primary-black);
-    z-index: -1;
-    transition: all 1s;
-  }
-
-  .dark .link::before {
-    background-color: var(--color-primary-white);
-  }
-
-  .link:hover::before {
-    width: 160%;
-  }
-
-  @keyframes gradient-calm {
-
-    0%,
-    100% {
-      background-position: 50% -20%;
-    }
-
-    50% {
-      background-position: 52% -18%;
-    }
-  } */
 }
 
 html {

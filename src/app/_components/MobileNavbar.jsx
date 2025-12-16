@@ -18,7 +18,7 @@ function MobileNavbar() {
 						onClick={toggleMenuFalse}
 						className=' fixed inset-0 bg-black/50 z-90 block sm:hidden '></div>
 
-					<nav className='fixed top-5 right-5 text-primary-white bg-primary-black dark:bg-primary w-20 rounded-2xl block sm:hidden z-100  p-4'>
+					<nav className='fixed top-20 right-5 text-primary-white bg-primary-black dark:bg-primary w-20 rounded-2xl block sm:hidden z-100  p-4'>
 						<ul className='flex flex-col items-center font-medium gap-5'>
 							<li>
 								<Link href='\'>

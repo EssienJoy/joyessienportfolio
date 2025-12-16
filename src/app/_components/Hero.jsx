@@ -13,7 +13,7 @@ function Hero() {
 			</h1>
 			<section className='lg:w-[80%] mx-auto   grid place-items-center '>
 				<h2 className={`text-3xl sm:text-5xl font-medium sm:text-center`}>
-					✨ Hi, I’m Essien Joy.
+					Hi, I’m Essien Joy.
 				</h2>
 
 				<p className='my-8 text-lg  sm:text-2xl  lg:w-[80%] sm:text-center mx-auto'>
@@ -21,11 +21,13 @@ function Hero() {
 					designs into functional, user-friendly products 🎨⚡
 				</p>
 
-				<div className='grid sm:grid-cols-2 gap-4 text-xl max-w-[450px] mx-auto'>
+				<div className='grid sm:grid-cols-2 gap-2 sm:gap-4 text-xl w-full sm:w-[450px] mx-auto'>
 					{heroUrl.map((hero, index) => (
 						<Link
 							key={hero.url}
-							className={` flex justify-center gap-1 hover:gap-3`}
+							className={`${
+								index === heroUrl.length - 1 ? "sm:col-span-2" : ""
+							} flex justify-center gap-1 hover:gap-3`}
 							href={hero.url}>
 							<span>{hero.text}</span>
 							<span>
