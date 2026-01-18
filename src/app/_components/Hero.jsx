@@ -5,15 +5,13 @@ import { heroUrl } from "../_constants/data";
 
 function Hero() {
 	return (
-		<Container
-			className='my-5 sm:py-10 relative h-dvh grid place-items-center '
-			id='home'>
+		<Container className='py-10 relative  grid place-items-center ' id='home'>
 			<section className='   grid place-items-center text-3xl z-50'>
-				<h1 className={`text-3xl sm:text-7xl font-medium sm:text-center`}>
+				<h1 className={`text-4xl sm:text-7xl font-medium text-center`}>
 					✨ Hi, I’m Essien Joy.
 				</h1>
 
-				<p className='my-8 text-lg  sm:text-2xl  lg:w-[80%] sm:text-center mx-auto'>
+				<p className='my-8 text-lg  sm:text-2xl  lg:w-[80%] text-center mx-auto'>
 					I build and develop full-stack web applications with authentication
 					and security in mind.
 				</p>
