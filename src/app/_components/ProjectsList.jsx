@@ -9,7 +9,7 @@ function ProjectsList({ projects }) {
 		<section className='mt-4 '>
 			{projects?.map((project) => (
 				<div
-					className='grid lg:grid-cols-2 gap-6 p-3 sm:p-6 dark:border-[#424242] border-primary-black  border-solid border rounded-2xl mb-10'
+					className='grid lg:grid-cols-2 gap-6 p-3 sm:p-6 dark:border-primary border-primary-black  border-solid border rounded-2xl mb-10'
 					key={project.id}>
 					<section className='dark:bg-primary bg-primary-black backdrop-blur-[2px] shadow-2xl rounded-3xl  p-3 sm:p-5'>
 						<figure className='relative  h-[250px] sm:h-[350px]'>

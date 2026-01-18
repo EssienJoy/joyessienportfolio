@@ -1,10 +1,34 @@
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaReact, FaGitAlt, FaGithub, FaSass, FaCss3Alt, FaHtml5, FaLinkedin } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiThreeDotJs, SiTailwindcss, SiSupabase, SiJavascript } from "react-icons/si";
+import {
+    SiThreeDotJs, SiTailwindcss, SiSupabase, SiJavascript, SiMongodb,
+    SiMongoose, SiExpress
+} from "react-icons/si";
+import { DiNodejs } from "react-icons/di";
 import { TbBrandThreejs } from "react-icons/tb";
 
 export const skills = [
+    {
+        skill: 'Node.js',
+        icon: DiNodejs,
+        color: '#33993'
+    },
+    {
+        skill: 'Express.js',
+        icon: SiExpress,
+        // color: "#000000",
+    },
+    {
+        skill: 'MongoDB',
+        icon: SiMongodb,
+        color: '#47A248'
+    },
+    {
+        skill: 'Mongoose',
+        icon: SiMongoose,
+        color: '#880000'
+    },
     {
         skill: "Next.js",
         icon: RiNextjsFill,
@@ -14,10 +38,10 @@ export const skills = [
         icon: FaReact,
         color: "#61DAFB",
     },
-    {
-        skill: "Three.js",
-        icon: TbBrandThreejs,
-    },
+    // {
+    //     skill: "Three.js",
+    //     icon: TbBrandThreejs,
+    // },
     {
         skill: "Git",
         icon: FaGitAlt,

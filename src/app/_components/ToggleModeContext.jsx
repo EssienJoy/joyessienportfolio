@@ -30,12 +30,20 @@ function ToggleModeProvider({ children }) {
 		}
 	}, [mode]);
 
-	function toggleMode() {
-		setMode((prev) => (prev === "light" ? "dark" : "light"));
+	function lightMode() {
+		setMode("light");
 	}
 
+	function darkMode() {
+		setMode("dark");
+	}
+
+	// function toggleMode() {
+	// 	setMode((prev) => (prev === "light" ? "dark" : "light"));
+	// }
+
 	return (
-		<ToggleModeContext.Provider value={{ mode, toggleMode }}>
+		<ToggleModeContext.Provider value={{ mode, lightMode, darkMode }}>
 			{children}
 		</ToggleModeContext.Provider>
 	);

@@ -14,8 +14,8 @@ function Skills() {
 					return (
 						<li
 							key={skill.skill}
-							className='hover:scale-105 cursor-pointer border-primary-black dark:border-primary border border-solid text-primary-black dark:text-primary-white flex  items-center w-full gap-3  px-6 py-3  rounded-2xl'>
-							<p className='font-bold'>{skill.skill}</p>
+							className='hover:scale-105 cursor-pointer bg-primary-black dark:bg-primary  flex  items-center w-full gap-3  px-6 py-3  rounded-2xl'>
+							<p className='font-bold text-primary-white'>{skill.skill}</p>
 							{IconComponent && (
 								<IconComponent
 									size='2rem'

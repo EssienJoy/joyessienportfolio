@@ -2,10 +2,11 @@ import EmailCopy from "./CopyEmail";
 import { socials, quickLinks } from "../_constants/data";
 import Link from "next/link";
 import Container from "./Container";
+import ToggleModeBtn from "./ToggleModeBtn";
 
 function Footer() {
 	return (
-		<footer className=' text-primary-white py-6 mt-10 bg-primary-black dark:bg-primary'>
+		<footer className=' text-primary-white py-3 mt-5 bg-primary-black dark:bg-primary'>
 			<Container className='' id='socials'>
 				<div className='flex justify-between gap-10 flex-wrap'>
 					<nav>
@@ -29,7 +30,7 @@ function Footer() {
 					</nav>
 					<nav>
 						<h2 className='text-2xl font-bold  my-3 '>Socials</h2>
-						<ul className='flex flex-col gap-3'>
+						<ul className='flex flex-col '>
 							{socials.map((social) => {
 								const Icon = social.icon;
 								return (
@@ -50,7 +51,10 @@ function Footer() {
 					</nav>
 				</div>
 
-				<p className='text-sm text-center mt-10'>©2025 Essien Joy</p>
+				<div className='flex  items-center justify-between mt-5'>
+					<p className='text-sm '>©2025 Essien Joy</p>
+					<ToggleModeBtn />
+				</div>
 			</Container>
 		</footer>
 	);

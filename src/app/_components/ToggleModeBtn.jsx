@@ -5,25 +5,27 @@ import { IoSunnyOutline } from "react-icons/io5";
 import { LuMoonStar } from "react-icons/lu";
 
 function ToggleModeBtn() {
-	const { toggleMode, mode } = useToggleMode();
+	const { lightMode, darkMode, mode } = useToggleMode();
 
 	return (
-		<button
-			onClick={toggleMode}
-			className={`  flex items-center justify-center w-7 h-7 rounded-full border border-primary-black dark:border-primary-white transition-all duration-500
-        ${
-					mode === "dark"
-						? "bg-primary-black  text-primary-white"
-						: "bg-primary-grey text-primary-black"
-				}
-        scale-105`}>
-			{mode === "dark" ? (
-				<IoSunnyOutline size='1rem' />
-			) : (
-				<LuMoonStar size='1rem' />
-			)}
-		</button>
+		<div
+			className='flex items-center gap-2 py-1 px-3 rounded-4xl
+		border-primary dark:border-primary-black border border-solid'>
+			<button
+				onClick={lightMode}
+				className={` text-primary-white 
+				${mode === "light" ? " bg-[#57575779] rounded-2xl p-1 " : ""}
+				`}>
+				<IoSunnyOutline size='1.25rem' />
+			</button>
+			<button
+				onClick={darkMode}
+				className={`  text-primary-white ${
+					mode === "dark" ? " bg-[#57575784] rounded-2xl p-1" : ""
+				} `}>
+				<LuMoonStar size='1.25rem' />
+			</button>
+		</div>
 	);
 }
-
 export default ToggleModeBtn;

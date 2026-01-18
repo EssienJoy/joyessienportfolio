@@ -29,9 +29,41 @@ export const projects = [
         github: "https://github.com/EssienJoy/audiophile",
         live: "https://audiophile-vxux.vercel.app/",
     },
+
+    {
+        id: 2,
+        image: "/images/planner-backend.png",
+        title: "Planner Api",
+        info: "Backend Api for planner app",
+        description:
+            "Planner API is a backend service that powers a task and goal planning application. It provides secure endpoints for user authentication and task management, allowing users to create, update, complete, and delete planner tasks.",
+
+        details:
+            "The API is designed with a RESTful architecture and focuses on clean data modeling, authentication, and predictable error handling. It supports user-based task ownership, protected routes, and scalable backend structure suitable for frontend or mobile clients.",
+
+        implimentations: [
+            "Implemented RESTful API endpoints for planner tasks (CRUD operations)",
+            "Added JWT-based authentication and protected routes",
+            "Designed MongoDB schemas for users and tasks",
+            "Implemented middleware for authorization and request validation",
+            "Structured backend using MVC architecture for scalability",
+            "Documented all endpoints using Postman for easy testing and consumption"
+        ],
+
+        problem:
+            "Users need a secure and reliable backend to manage personal tasks and planner data",
+
+        solution:
+            "Built a structured backend API with authentication and protected task management endpoints",
+
+        stack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT"],
+        github: "https://github.com/EssienJoy/planner-backend",
+        live: "https://documenter.getpostman.com/view/48023599/2sBXVhEX36",
+    },
+
     {
         note: info,
-        id: 2,
+        id: 3,
         image: '/images/calendarproject.png',
         title: "Planner",
         info: "Plan goals, Track Goals, Tick Completed goals",
@@ -55,9 +87,10 @@ export const projects = [
         github: "https://github.com/EssienJoy/planner",
         live: "https://planner-six-chi.vercel.app/",
     },
+
     {
         note: info,
-        id: 3,
+        id: 4,
         image: '/images/eazymart.png',
         title: "Eazy Mart",
         info: "Window Shopping From Home",
@@ -75,12 +108,12 @@ export const projects = [
         problem: "Users want the joy of window shopping without leaving home",
         solution: "Interactive product browsing and clean UI design",
 
-        stack: ["Tailwind CSS", "JavaScript"],
+        stack: ["Tailwind Css", "JavaScript", "Html"],
         github: "https://github.com/EssienJoy/eazymart",
         live: "/wip",
     },
     {
-        id: 4,
+        id: 5,
         image: '/images/myazaclone.png',
         title: "My Aza",
         info: "Quick Transactions, Clean UI",
@@ -118,7 +151,7 @@ export const otherProjects = [
         stack: ['React', 'Tailwind ', 'Supabase']
     },
     {
-        image: '/images/wildoasis.png',
+        image: '/images/cartolink.png',
         title: "cartolink",
         link: "https://github.com/EssienJoy/cartolink",
         stack: ['Next js', 'Tailwind ']

@@ -16,7 +16,7 @@ async function page({ params }) {
 	const maxLength = projects?.length || 5;
 
 	return (
-		<Container className=''>
+		<Container className='my-5'>
 			{project.note && (
 				<p className='my-4 text-sm text-yellow-700 bg-yellow-50 border-l-4 border-yellow-400 p-3 rounded'>
 					⚠️ {project?.note}
