@@ -5,7 +5,9 @@ import { heroUrl } from "../_constants/data";
 
 function Hero() {
 	return (
-		<Container className='py-10 relative  grid place-items-center ' id='home'>
+		<Container
+			className='mb-10 mt-30 relative  grid place-items-center '
+			id='home'>
 			<section className='   grid place-items-center text-3xl z-50'>
 				<h1 className={`text-4xl sm:text-7xl font-medium text-center`}>
 					✨ Hi, I’m Essien Joy.

@@ -21,7 +21,7 @@ function ToggleModeBtn() {
 			<button
 				onClick={darkMode}
 				className={`  text-primary-white ${
-					mode === "dark" ? " bg-[#57575784] rounded-2xl p-1" : ""
+					mode === "dark" ? " bg-[#575757c8] rounded-2xl p-1" : ""
 				} `}>
 				<LuMoonStar size='1.25rem' />
 			</button>
