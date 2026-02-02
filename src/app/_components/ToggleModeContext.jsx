@@ -11,7 +11,7 @@ function ToggleModeProvider({ children }) {
 			if (storedTheme) return storedTheme;
 
 			const prefersDark = window.matchMedia(
-				"(prefers-color-scheme: dark)"
+				"(prefers-color-scheme: dark)",
 			).matches;
 			return prefersDark ? "dark" : "light";
 		}
@@ -30,20 +30,20 @@ function ToggleModeProvider({ children }) {
 		}
 	}, [mode]);
 
-	function lightMode() {
-		setMode("light");
-	}
-
-	function darkMode() {
-		setMode("dark");
-	}
-
-	// function toggleMode() {
-	// 	setMode((prev) => (prev === "light" ? "dark" : "light"));
+	// function lightMode() {
+	// 	setMode("light");
 	// }
 
+	// function darkMode() {
+	// 	setMode("dark");
+	// }
+
+	function toggleMode() {
+		setMode((prev) => (prev === "light" ? "dark" : "light"));
+	}
+
 	return (
-		<ToggleModeContext.Provider value={{ mode, lightMode, darkMode }}>
+		<ToggleModeContext.Provider value={{ mode, toggleMode }}>
 			{children}
 		</ToggleModeContext.Provider>
 	);

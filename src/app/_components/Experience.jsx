@@ -26,7 +26,7 @@ function Experience() {
 								<li>Type Script</li>
 								<li>Redux</li>
 								<li>Tailwind</li>
-								<li>Fast Api</li>
+								{/* <li>Fast Api</li> */}
 							</ul>
 						</div>
 					</Container>
