@@ -56,7 +56,7 @@ export const projects = [
         problem: "Users struggling to complete a task",
         solution: "Create Plans,Track goals,Countdown and reminders",
 
-        stack: ["Styled Components", "React"],
+        stack: ["Tailwind", "React"],
         github: "https://github.com/EssienJoy/planner",
         live: "https://planner-six-chi.vercel.app/",
     },

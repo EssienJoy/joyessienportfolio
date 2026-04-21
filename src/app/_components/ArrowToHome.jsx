@@ -1,15 +1,14 @@
 import Link from "next/link";
-import { FaArrowCircleUp } from "react-icons/fa";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 function ArrowToHome() {
 	return (
-		<aside>
-			<Link
-				className='fixed bottom-5  z-50  right-2 text-[#ffffff]'
-				href='#home'>
-				<FaArrowCircleUp size='2rem' />
-			</Link>
-		</aside>
+		<Link href='/' className='p-1'>
+			<IoIosArrowRoundBack
+				size='2rem'
+				className='text-primary-black dark:text-primary-white'
+			/>
+		</Link>
 	);
 }
 

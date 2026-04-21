@@ -5,11 +5,15 @@ import ProjectsList from "../_components/ProjectsList";
 import OtherProjects from "../_components/OtherProjects";
 import Container from "../_components/Container";
 import { projects } from "../_data/projectDetails";
+import ArrowToHome from "../_components/ArrowToHome";
 
 export default async function Projects() {
 	return (
 		<Container id='projects' className='py-5'>
-			<h2 className='text-3xl sm:text-5xl font-bold  my-6'>Projects</h2>
+			<ArrowToHome />
+			<h2 className='text-3xl sm:text-5xl text-center font-bold  my-6'>
+				Projects
+			</h2>
 
 			<ProjectsList projects={projects} />
 
@@ -21,7 +25,8 @@ export default async function Projects() {
 					className='gap-2'
 					href='https://github.com/EssienJoy?tab=repositories'
 					target='_blank'
-					rel='noopener noreferrer'>
+					rel='noopener noreferrer'
+					variant='filled'>
 					<span>Github</span>{" "}
 					<DiGithubBadge className='shrink-0' size='1.5rem' />
 				</Link>

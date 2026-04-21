@@ -6,9 +6,14 @@ import { LuMoonStar } from "react-icons/lu";
 
 function ToggleModeBtn() {
 	const { mode, toggleMode } = useToggleMode();
+	console.log(mode);
 
 	return (
-		<button onClick={toggleMode} className={` text-primary-white `}>
+		<button
+			onClick={toggleMode}
+			className={`${
+				mode === "light" ? "text-primary-black" : "text-primary-white"
+			}`}>
 			{mode === "light" ? (
 				<IoSunnyOutline size='1.25rem' />
 			) : (

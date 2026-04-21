@@ -83,6 +83,7 @@ async function page({ params }) {
 				<Link
 					href={project.live}
 					target='_blank'
+					variant='filled'
 					className='gap-2 border-primary flex'
 					rel='noopener noreferrer'>
 					<span>Live</span>
@@ -92,6 +93,7 @@ async function page({ params }) {
 					className='gap-2 border-primary flex'
 					href={project.github}
 					target='_blank'
+					variant='filled'
 					rel='noopener noreferrer'>
 					<span> GitHub</span>{" "}
 					<DiGithubBadge className='shrink-0' size='1.5rem' />

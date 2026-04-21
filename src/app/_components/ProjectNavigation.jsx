@@ -5,6 +5,7 @@ function ProjectNavigation({ project, projectLength }) {
 		<div className='flex justify-center items-center gap-3 mt-6'>
 			{project.id > 1 && (
 				<Link
+					variant='white'
 					className='text-sm sm:text-lg'
 					href={`/projects/${project.id - 1}`}
 					prefetch>
@@ -16,6 +17,7 @@ function ProjectNavigation({ project, projectLength }) {
 			</p>
 			{project.id < projectLength && (
 				<Link
+					variant='white'
 					className='text-sm sm:text-lg'
 					href={`/projects/${project.id + 1}  `}
 					prefetch>

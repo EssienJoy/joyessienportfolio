@@ -1,8 +1,10 @@
+import ArrowToHome from "../_components/ArrowToHome";
 import ContactMeForm from "../_components/ContactMeForm";
 
 function ContactMe() {
 	return (
 		<section id='contactme' className='py-10 px-3 w-full sm:w-[90%] mx-auto'>
+			<ArrowToHome />
 			<h2 className='text-3xl sm:text-4xl text-center font-medium mb-4'>
 				Contact Me
 			</h2>

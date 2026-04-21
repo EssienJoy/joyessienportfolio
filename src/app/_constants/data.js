@@ -8,7 +8,36 @@ import {
 import { DiNodejs } from "react-icons/di";
 import { TbBrandThreejs } from "react-icons/tb";
 
-export const skills = [
+export const devTools = [
+    {
+        skill: "Git",
+        icon: FaGitAlt,
+        color: "#F05032",
+    },
+    {
+        skill: "GitHub",
+        icon: FaGithub,
+    },
+    {
+        skill: "Postman",
+        // icon: FaGithub,
+    },
+    {
+        skill: "Figma",
+        // icon: FaGithub,
+    },
+    {
+        skill: "Vercel",
+        // icon: FaGithub,
+    },
+    {
+        skill: "Netlify",
+        // icon: FaGithub,
+    },
+
+];
+
+export const backend = [
     {
         skill: 'Node.js',
         icon: DiNodejs,
@@ -30,6 +59,15 @@ export const skills = [
         color: '#880000'
     },
     {
+        skill: "Supabase",
+        icon: SiSupabase,
+        color: "#3ECF8E",
+    },
+];
+
+export const frontend = [
+
+    {
         skill: "Next.js",
         icon: RiNextjsFill,
     },
@@ -42,25 +80,13 @@ export const skills = [
     //     skill: "Three.js",
     //     icon: TbBrandThreejs,
     // },
-    {
-        skill: "Git",
-        icon: FaGitAlt,
-        color: "#F05032",
-    },
-    {
-        skill: "GitHub",
-        icon: FaGithub,
-    },
+
     {
         skill: "Tailwind CSS",
         icon: SiTailwindcss,
         color: "#06B6D4",
     },
-    {
-        skill: "Supabase",
-        icon: SiSupabase,
-        color: "#3ECF8E",
-    },
+
     {
         skill: "Sass",
         icon: FaSass,
@@ -166,17 +192,17 @@ export const socials = [
         text: 'Github',
     },
     {
-        href: 'https://x.com/jojoisatechbaby',
+        href: 'https://x.com/meetessienjoy',
         icon: FaSquareXTwitter,
         text: 'Twitter'
     },
 ];
 
 export const navLink = [
-    {
-        text: "Home",
-        href: "/",
-    },
+    // {
+    //     text: "Home",
+    //     href: "/",
+    // },
     {
         text: "	Projects",
         href: "/projects",

@@ -1,36 +1,49 @@
-import Container from "./Container";
+import { PiSuitcaseSimple } from "react-icons/pi";
+
+const experience = [
+	{
+		year: "2025",
+		project: "Campus Cart",
+		skill: "Frontend Developer Internship",
+		stack: ["Next js", "Type Script", "Redux", "Tailwind"],
+	},
+	{
+		year: "2025 - 2026",
+		project: "Plan Pal",
+		skill: "Fullstack Development",
+		stack: ["Node js", "Express js", "React", "Mongo db", "Mongoose"],
+	},
+];
 
 function Experience() {
 	return (
-		<section className='my-10 '>
-			<Container>
-				<h2 className='text-3xl sm:text-5xl font-bold  my-6 '>
-					Work Experience
-				</h2>
-			</Container>
+		<section className='w-300 px-5 '>
+			<h2 className='text-2xl flex items-center gap-3 font-bold mb-5  '>
+				<PiSuitcaseSimple /> <span>Experience</span>
+			</h2>
 
 			<ul>
-				<li className='border-t-primary-black border-b-primary-black  dark:border-t-primary dark:border-b-primary border-t border-b border-solid '>
-					<Container className='max-w-7xl flex flex-col sm:flex-row gap-10 sm:gap-20 py-6 items-start'>
-						<div className='flex flex-col gap-3'>
-							<p className='font-bold'>2025</p>
+				{experience.map((e) => {
+					return (
+						<li
+							key={e.project}
+							className='border-t-primary-black border-b-primary-black dark:border-t-[#342752] dark:border-b-[#342752]   border-t border-b border-solid '>
+							<section className=' flex flex-col px-3  py-6 items-start'>
+								<p className='text-sm'>{e.year}</p>
 
-							<p>1 month 1 week</p>
-						</div>
-
-						<div className='grow flex flex-col gap-3'>
-							<h2 className='font-bold text-2xl'>Campus Cart</h2>
-							<p>Frontend Developer Internship</p>
-							<ul className='flex flex-wrap gap-5 uppercase '>
-								<li>Next js</li>
-								<li>Type Script</li>
-								<li>Redux</li>
-								<li>Tailwind</li>
-								{/* <li>Fast Api</li> */}
-							</ul>
-						</div>
-					</Container>
-				</li>
+								<div className='grow flex flex-col gap-2'>
+									<h2 className='font-bold text-xl'>{e.project}</h2>
+									<p className='font-semibold text-lg'>{e.skill}</p>
+									<ul className='flex flex-wrap text-xs gap-3 uppercase '>
+										{e.stack.map((s) => (
+											<li key={s}>{s}</li>
+										))}
+									</ul>
+								</div>
+							</section>
+						</li>
+					);
+				})}
 			</ul>
 		</section>
 	);

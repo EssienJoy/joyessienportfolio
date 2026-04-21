@@ -3,19 +3,34 @@
 import { Link as AriaLink } from "react-aria-components";
 
 function Link({
-	paddingInline = "1.5rem",
-	paddingBlock = "1rem",
+	variant = "outline",
+	size = "md",
 	className = "",
 	children,
 	...props
 }) {
+	// 🎯 Variants (design styles)
+	const variants = {
+		filled: "bg-primary-black text-white dark:bg-primary ",
+		// ghost: "",
+		white: "bg-white text-primary-black border dark:border-transparent ",
+	};
+
+	// 🎯 Sizes
+	const sizes = {
+		sm: "text-sm px-4 py-2",
+		md: "text-sm sm:text-lg px-6 py-3",
+		lg: "text-lg px-8 py-4",
+	};
+
 	return (
 		<AriaLink
-			className={` text-sm  sm:text-lg   flex items-center rounded-2xl px-[${paddingInline}] border border-solid dark:border-primary border-primary-black font-medium transition-all   ${className}`}
-			style={{
-				paddingInline,
-				paddingBlock,
-			}}
+			className={`
+        flex items-center justify-center rounded-md
+        ${variants[variant]}
+        ${sizes[size]}
+        ${className}
+      `}
 			{...props}>
 			{children}
 		</AriaLink>

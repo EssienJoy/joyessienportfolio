@@ -45,12 +45,14 @@ function ProjectsList({ projects }) {
 									href={project.live}
 									target='_blank'
 									className='gap-2'
+									variant='filled'
 									rel='noopener noreferrer'>
 									<span>Live</span>
 									<HiLink size='1.5rem' />
 								</Link>
 								<Link
 									className='gap-2'
+									variant='filled'
 									href={project.github}
 									target='_blank'
 									rel='noopener noreferrer'>
@@ -61,6 +63,7 @@ function ProjectsList({ projects }) {
 
 							<Link
 								className=' justify-center gap-1 hover:gap-3'
+								variant='white'
 								href={`/projects/${project.id}`}>
 								<span>Project Details</span>
 								<HiOutlineChevronRight size='1.5rem' />

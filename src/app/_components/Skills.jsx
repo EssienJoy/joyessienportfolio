@@ -1,33 +1,61 @@
-import { skills } from "../_constants/data";
-import Container from "./Container";
+import { frontend, backend, devTools } from "../_constants/data";
+import { VscArrowSwap } from "react-icons/vsc";
+
+const stack = [
+	{
+		text: "Frontend",
+		skills: frontend,
+	},
+	{
+		text: "Backend",
+		skills: backend,
+	},
+	{
+		text: "Development and Tools",
+		skills: devTools,
+	},
+];
 
 function Skills() {
 	return (
-		<Container
+		<section
 			id='skills'
-			className=' my-25 text-primary-black dark:text-primary-white'>
-			<h2 className='text-3xl sm:text-5xl font-bold mb-6'>Skills</h2>
+			className=' text-primary-black dark:text-primary-white mt-5'>
+			<h2 className='text-2xl font-bold mb-6 flex items-center gap-3'>
+				<VscArrowSwap />
+				<span>Tech Stack</span>
+			</h2>
 
-			<ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 my-10'>
-				{skills.map((skill) => {
-					const IconComponent = skill.icon;
+			<section className='space-y-5'>
+				{stack.map((s) => {
 					return (
-						<li
-							key={skill.skill}
-							className='hover:scale-105 cursor-pointer bg-primary-black dark:bg-primary  flex  items-center w-full gap-3  px-6 py-3  rounded-2xl'>
-							<p className='font-bold text-primary-white'>{skill.skill}</p>
-							{IconComponent && (
-								<IconComponent
-									size='2rem'
-									style={{ color: skill.color }}
-									className='transition-transform duration-500 group-hover:scale-110 shrink-0'
-								/>
-							)}
-						</li>
+						<div key={s.text} className='my-5'>
+							<h2 className='text-xl font-bold mb-3'>{s.text}</h2>
+							<ul className='flex flex-wrap gap-3 '>
+								{s.skills.map((skill) => {
+									const IconComponent = skill.icon;
+									return (
+										<li
+											key={skill.skill}
+											className=' bg-primary-black dark:bg-primary  flex  items-center  gap-3  p-3  rounded-md'>
+											<p className='font-bold text-primary-white text-sm'>
+												{skill.skill}
+											</p>
+											{IconComponent && (
+												<IconComponent
+													// size='2rem'
+													style={{ color: skill.color }}
+												/>
+											)}
+										</li>
+									);
+								})}
+							</ul>
+						</div>
 					);
 				})}
-			</ul>
-		</Container>
+			</section>
+		</section>
 	);
 }
 
