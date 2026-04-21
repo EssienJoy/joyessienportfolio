@@ -10,7 +10,7 @@ function Footer() {
 		<footer className='  '>
 			<Container className='' id='socials'>
 				<div
-					className='border-t flex gap-5 dark:border-[#342752] py-10
+					className='border-t flex flex-wrap gap-5 dark:border-[#342752] py-10
 				 border-primary-black'>
 					<nav className='grow'>
 						<h2 className='text-xl font-bold flex items-center gap-3  my-3 '>

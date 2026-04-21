@@ -20,8 +20,8 @@ export const ProjectsCertPreview = () => {
 	};
 
 	return (
-		<section className='my-10 flex gap-10'>
-			<section className='w-1/2 space-y-5'>
+		<section className='my-10 flex flex-col sm:flex-row gap-10'>
+			<section className='sm:w-1/2 space-y-5'>
 				<div className='flex items-center justify-between'>
 					<h2 className='text-2xl flex items-center gap-3 font-bold'>
 						<GrProjects />
@@ -34,7 +34,7 @@ export const ProjectsCertPreview = () => {
 				</div>
 
 				<div>
-					<ul className='grid grid-cols-2 gap-5'>
+					<ul className='grid md:grid-cols-2 gap-5'>
 						{projects.map((proj) => {
 							const isExpanded = expandedIds[proj.id];
 							const isLong = proj.description.length > CHAR_LIMIT;

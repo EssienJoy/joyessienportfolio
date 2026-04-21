@@ -17,7 +17,7 @@ const experience = [
 
 function Experience() {
 	return (
-		<section className='w-300 px-5 '>
+		<section className='sm:w-300 px-5 '>
 			<h2 className='text-2xl flex items-center gap-3 font-bold mb-5  '>
 				<PiSuitcaseSimple /> <span>Experience</span>
 			</h2>

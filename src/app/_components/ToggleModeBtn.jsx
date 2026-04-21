@@ -6,7 +6,7 @@ import { LuMoonStar } from "react-icons/lu";
 
 function ToggleModeBtn() {
 	const { mode, toggleMode } = useToggleMode();
-	console.log(mode);
+	// console.log(mode);
 
 	return (
 		<button
