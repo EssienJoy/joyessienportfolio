@@ -6,6 +6,7 @@ import { ToggleModeProvider } from "./_components/ToggleModeContext";
 import { ToggleProvider } from "./_components/ToggleMenuContext";
 import MobileNavbar from "./_components/MobileNavbar";
 import { cookies } from "next/headers";
+import Footer from "./_components/Footer";
 
 const spaceGrotesk = Space_Grotesk({
 	weight: ["400", "500", "600", "700"],
@@ -30,6 +31,8 @@ export default async function RootLayout({ children }) {
 					<ToggleModeProvider>
 						<MobileNavbar />
 						{children}
+						<Footer />
+
 						<Toaster
 							position='top-center'
 							gutter={12}

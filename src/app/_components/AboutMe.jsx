@@ -10,25 +10,23 @@ async function AboutMe() {
 
 			<div className='space-y-5'>
 				<p>
-					I’m a frontend developer focused on building intuitive, user-friendly
-					interfaces and seamless web experiences. I enjoy working on API-driven
-					applications, especially those involving real-time features and data
-					integration.
+					I am a Frontend Developer,focused on building responsive frontend web
+					applications by combining desingn and user expereince. My primary
+					tools are HTML, CSS, JavaScript, React, Next.js, and Tailwind CSS.
+				</p>
+				<p>
+					I enjoy turning ideas into interactive interfaces while continuously
+					improving my understanding of modern frontend development and web
+					performance.I'm currently expanding my skills by building real-world
+					projects and exploring backend technologies to become a well-rounded
+					full-stack developer.
 				</p>
 
 				<p>
-					Beyond technical skills, I bring strong collaboration and
-					communication abilities developed through working with diverse teams.
-					This has shaped how I approach problem-solving—with clarity,
-					adaptability, and a user-first mindset.
-				</p>
-
-				<p>
-					I actively leverage modern tools, including AI-assisted workflows, to
-					improve efficiency and accelerate learning. I’m passionate about
-					continuous growth and currently seeking opportunities where I can
-					contribute, learn from experienced developers, and build meaningful
-					products.
+					I'm open to remote internship and junior frontend opportunities where
+					I can contribute, learn from experienced engineers, and continue
+					growing.Outside of coding, I enjoy creating and editing, youtube
+					videos.
 				</p>
 			</div>
 		</section>

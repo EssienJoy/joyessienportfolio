@@ -192,7 +192,7 @@ export const socials = [
         text: 'Github',
     },
     {
-        href: 'https://x.com/meetessienjoy',
+        href: 'https://x.com/essienjoyidara',
         icon: FaSquareXTwitter,
         text: 'Twitter'
     },

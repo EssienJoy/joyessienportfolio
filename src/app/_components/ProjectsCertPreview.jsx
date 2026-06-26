@@ -8,6 +8,7 @@ import { GrProjects } from "react-icons/gr";
 import { projects as data } from "../_data/projectDetails";
 import { RiExternalLinkLine } from "react-icons/ri";
 import { FiGithub } from "react-icons/fi";
+import { AiOutlineCalendar, AiOutlineLink } from "react-icons/ai";
 
 const CHAR_LIMIT = 50;
 
@@ -20,8 +21,8 @@ export const ProjectsCertPreview = () => {
 	};
 
 	return (
-		<section className='my-10 flex flex-col sm:flex-row gap-10'>
-			<section className='sm:w-1/2 space-y-5'>
+		<section className='my-10 flex flex-col md:flex-row gap-6'>
+			<section className='md:w-1/2 space-y-5'>
 				<div className='flex items-center justify-between'>
 					<h2 className='text-2xl flex items-center gap-3 font-bold'>
 						<GrProjects />
@@ -100,14 +101,64 @@ export const ProjectsCertPreview = () => {
 				</div>
 			</section>
 
-			<section>
-				<div className='flex items-center justify-between'>
-					<h2 className='text-2xl flex items-center gap-3 font-bold'>
-						<AiOutlineSafetyCertificate />
-						<span>Certificates</span>
-					</h2>
-				</div>
-			</section>
+			<Certificates />
 		</section>
 	);
 };
+
+const certificates = [
+	{
+		id: 1,
+		title: "Node js, Express, Mongo Db & More: The Complete Bootcamp",
+		issuer: "Udemy • Jonas Schmedtmann",
+		date: "Jan 12th",
+		image: "/images/jonasnodejs.jpg",
+	},
+	{
+		id: 2,
+		title: "Html and Css Bootcamp",
+		issuer: "Udemy • Jonas Schmedtmann",
+		date: "June 26th",
+		image: "/images/htmlcssbootcamp.jpg",
+	},
+];
+
+function Certificates() {
+	return (
+		<section className='space-y-10 md:w-1/2'>
+			<h2 className='text-2xl flex items-center gap-3 font-bold'>
+				<AiOutlineSafetyCertificate />
+				<span>Certificates</span>
+			</h2>
+
+			<div className='grid gap-8  '>
+				{certificates.map((certificate) => (
+					<article
+						key={certificate.id}
+						className='sm:grid-cols-2 grid gap-5 p-3 border dark:bg-[#140c29] border-primary-black dark:border-[#342752]  rounded-lg backdrop-blur '>
+						<img
+							src={certificate.image}
+							alt={certificate.title}
+							className=' object-contain'
+						/>
+
+						<div className='space-y-4 flex flex-col justify-center'>
+							<div>
+								<h3 className='text-sm font-semibold'>{certificate.title}</h3>
+
+								<p className='text-xs text-purple-400 mt-1'>
+									{certificate.issuer}
+								</p>
+							</div>
+
+							<div className='flex items-center gap-2 text-sm text-gray-400'>
+								<AiOutlineCalendar />
+								{certificate.date}
+							</div>
+						</div>
+					</article>
+				))}
+			</div>
+		</section>
+	);
+}
