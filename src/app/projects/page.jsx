@@ -2,7 +2,7 @@ import { DiGithubBadge } from "react-icons/di";
 
 import Link from "@/app/_components/_ui/Link";
 import ProjectsList from "../_components/ProjectsList";
-import OtherProjects from "../_components/OtherProjects";
+// import OtherProjects from "../_components/OtherProjects";
 import Container from "../_components/Container";
 import { projects } from "../_data/projectDetails";
 import ArrowToHome from "../_components/ArrowToHome";
@@ -17,7 +17,7 @@ export default async function Projects() {
 
 			<ProjectsList projects={projects} />
 
-			<OtherProjects />
+			{/* <OtherProjects /> */}
 
 			<p className='flex items-center justify-around gap-2 sm:justify-center sm:gap-6 text-md  sm:text-2xl font-medium  '>
 				<span>View all projects on </span>

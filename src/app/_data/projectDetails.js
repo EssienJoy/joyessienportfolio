@@ -5,6 +5,56 @@ export const projects = [
 
     {
         id: 1,
+        image: "/images/wildoasis.png",
+        title: "Wild Oasis",
+        info: "Cabin Booking Platform, Clean UI",
+        description:
+            "Wild Oasis is a modern booking platform designed for reserving cabins, focused on simplicity, clarity, and a smooth user experience.",
+        details:
+            "I built Wild Oasis as a responsive web application using Next.js and Tailwind CSS. The project focuses on creating a clean UI for browsing cabins, viewing details, and making reservations, while maintaining a professional and intuitive layout.",
+        implementations: [
+            "Designed a responsive booking interface with Next.js and Tailwind CSS",
+            "Built clean and reusable UI components for listings and details pages",
+            "Focused on clear visual hierarchy and spacing for better usability",
+            "Ensured accessibility and cross-device responsiveness",
+        ],
+        problem: "Many booking platforms feel cluttered and overwhelming for users",
+        solution: "A clean, minimal booking interface that makes browsing and reserving cabins simple and intuitive",
+        stack: ["Next.js", "Tailwind CSS", "Supabase"],
+        github: "https://github.com/EssienJoy/the-wild-oasis-website",
+        live: "https://the-wild-oasis-website-flax-one.vercel.app/",
+    },
+    {
+        id: 2,
+        image: "/images/travel-agency.png",
+        title: "Travel Agency",
+        info: "An AI-powered travel planning platform",
+        description:
+            "Built a modern full-stack travel application that allows users to generate personalized travel itineraries with AI, explore destinations, securely authenticate, and manage their trips through an intuitive interface. The application features a responsive UI, analytics dashboard, trip management system, and cloud-backed data persistence.",
+
+        problem:
+            "Planning a vacation often requires switching between multiple websites for destinations, accommodations, itineraries, and budgeting. This fragmented experience is time-consuming and overwhelming for travelers.",
+
+        solution:
+            "Developed a centralized AI-powered platform that generates customized travel plans based on user preferences while allowing users to manage trips from a single dashboard. The application streamlines travel planning through intelligent recommendations, secure authentication, cloud storage, and interactive data management.",
+
+        stack: [
+            "React",
+            "React Router",
+            "TypeScript",
+            "Tailwind CSS",
+            "Appwrite",
+            "Groq AI",
+            "Syncfusion",
+            "Sentry",
+        ],
+        github: "https://github.com/EssienJoy/travel-agency/tree/main",
+
+        live: "https://travel-agency-sigma-roan.vercel.app/signin"
+    },
+
+    {
+        id: 3,
         image: "/images/planner-backend.png",
         title: "Planner Api",
         info: "Backend Api for planner app",
@@ -36,7 +86,7 @@ export const projects = [
 
     {
         note: info,
-        id: 2,
+        id: 4,
         image: '/images/calendarproject.png',
         title: "Planner",
         info: "Plan goals, Track Goals, Tick Completed goals",
@@ -61,29 +111,9 @@ export const projects = [
         live: "https://planner-six-chi.vercel.app/",
     },
 
+
     {
-        id: 3,
-        image: "/images/wildoasis.png",
-        title: "Wild Oasis",
-        info: "Cabin Booking Platform, Clean UI",
-        description:
-            "Wild Oasis is a modern booking platform designed for reserving cabins, focused on simplicity, clarity, and a smooth user experience.",
-        details:
-            "I built Wild Oasis as a responsive web application using Next.js and Tailwind CSS. The project focuses on creating a clean UI for browsing cabins, viewing details, and making reservations, while maintaining a professional and intuitive layout.",
-        implementations: [
-            "Designed a responsive booking interface with Next.js and Tailwind CSS",
-            "Built clean and reusable UI components for listings and details pages",
-            "Focused on clear visual hierarchy and spacing for better usability",
-            "Ensured accessibility and cross-device responsiveness",
-        ],
-        problem: "Many booking platforms feel cluttered and overwhelming for users",
-        solution: "A clean, minimal booking interface that makes browsing and reserving cabins simple and intuitive",
-        stack: ["Next.js", "Tailwind CSS", "Supabase"],
-        github: "https://github.com/EssienJoy/the-wild-oasis-website",
-        live: "https://the-wild-oasis-website-flax-one.vercel.app/",
-    },
-    {
-        id: 4,
+        id: 5,
         image: "/images/audophile.png",
         title: "Audophile",
         info: "Online Gadget Store",
@@ -110,30 +140,30 @@ export const projects = [
         live: "https://audiophile-vxux.vercel.app/",
     },
 
-    {
-        note: info,
-        id: 5,
-        image: '/images/eazymart.png',
-        title: "Eazy Mart",
-        info: "Window Shopping From Home",
-        description:
-            "Eazy Mart is a modern e-commerce web app that brings the window-shopping experience online, allowing users to explore products from the comfort of their home.",
-        details:
-            "I built Eazy Mart using Tailwind CSS and vanilla JavaScript to simulate a clean, fast, and responsive shopping interface. The project focuses on replicating the browsing and discovery aspect of window shopping, giving users a seamless way to scroll through product cards with an engaging UI.",
-        implimentations: [
-            "Developed a responsive UI using Tailwind CSS",
-            "Created reusable product card components for scalability",
-            "Implemented cart preview interactions for better shopping flow",
-            "Designed with user-friendly navigation to simulate a real store experience",
-        ],
+    // {
+    //     note: info,
+    //     id: 5,
+    //     image: '/images/eazymart.png',
+    //     title: "Eazy Mart",
+    //     info: "Window Shopping From Home",
+    //     description:
+    //         "Eazy Mart is a modern e-commerce web app that brings the window-shopping experience online, allowing users to explore products from the comfort of their home.",
+    //     details:
+    //         "I built Eazy Mart using Tailwind CSS and vanilla JavaScript to simulate a clean, fast, and responsive shopping interface. The project focuses on replicating the browsing and discovery aspect of window shopping, giving users a seamless way to scroll through product cards with an engaging UI.",
+    //     implimentations: [
+    //         "Developed a responsive UI using Tailwind CSS",
+    //         "Created reusable product card components for scalability",
+    //         "Implemented cart preview interactions for better shopping flow",
+    //         "Designed with user-friendly navigation to simulate a real store experience",
+    //     ],
 
-        problem: "Users want the joy of window shopping without leaving home",
-        solution: "Interactive product browsing and clean UI design",
+    //     problem: "Users want the joy of window shopping without leaving home",
+    //     solution: "Interactive product browsing and clean UI design",
 
-        stack: ["Tailwind Css", "JavaScript", "Html"],
-        github: "https://github.com/EssienJoy/eazymart",
-        live: "/wip",
-    },
+    //     stack: ["Tailwind Css", "JavaScript", "Html"],
+    //     github: "https://github.com/EssienJoy/eazymart",
+    //     live: "/wip",
+    // },
 
 ];
 
