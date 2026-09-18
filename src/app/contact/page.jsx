@@ -1,6 +1,11 @@
 import ArrowToHome from "../_components/ArrowToHome";
 import ContactMeForm from "../_components/ContactMeForm";
 
+// @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
+// Remove this opt-out after verifying the segment passes validation without it.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+// export const instant = false;
+
 function ContactMe() {
 	return (
 		<section id='contactme' className='py-10 px-3 w-full sm:w-[90%] mx-auto'>

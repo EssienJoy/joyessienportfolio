@@ -8,6 +8,11 @@ import MobileNavbar from "./_components/MobileNavbar";
 import { cookies } from "next/headers";
 import Footer from "./_components/Footer";
 
+// @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
+// Remove this opt-out after verifying the segment passes validation without it.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+// export const instant = false;
+
 const spaceGrotesk = Space_Grotesk({
 	weight: ["400", "500", "600", "700"],
 	subsets: ["latin"],

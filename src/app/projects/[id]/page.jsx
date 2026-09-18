@@ -8,6 +8,11 @@ import { projects } from "@/app/_data/projectDetails";
 import Link from "@/app/_components/_ui/Link";
 import ProjectNavigation from "@/app/_components/ProjectNavigation";
 
+// @next-codemod-ignore Cache Components adoption: this segment temporarily allows blocking.
+// Remove this opt-out after verifying the segment passes validation without it.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+// export const instant = false;
+
 async function page({ params }) {
 	const { id } = await params;
 	const project = projects.find((proj) => proj.id === Number(id));

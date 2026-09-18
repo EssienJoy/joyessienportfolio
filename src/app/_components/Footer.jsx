@@ -66,7 +66,7 @@ function Footer() {
 							</li>
 							<li className='px-2 py-1 dark:bg-[#140c29] border border-primary-black dark:border-[#342752] rounded-md'>
 								<EmailCopy />
-								<p>essienjoyidaratechie@gmail.com</p>
+								<p>talktoessienjoy@gmail.com</p>
 							</li>
 						</ul>
 					</nav>

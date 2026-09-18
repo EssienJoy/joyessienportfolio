@@ -14,15 +14,15 @@ const CHAR_LIMIT = 50;
 
 export const ProjectsCertPreview = () => {
 	const [expandedIds, setExpandedIds] = useState({});
-	const projects = data?.slice(0, 4);
+	const projects = data?.slice(0, 2);
 
 	const toggleExpanded = (id) => {
 		setExpandedIds((prev) => ({ ...prev, [id]: !prev[id] }));
 	};
 
 	return (
-		<section className='my-10 flex flex-col md:flex-row gap-6'>
-			<section className='md:w-1/2 space-y-5'>
+		<section className='my-10 grid sm:grid-cols-2 gap-6'>
+			<section className=' space-y-5'>
 				<div className='flex items-center justify-between'>
 					<h2 className='text-2xl flex items-center gap-3 font-bold'>
 						<GrProjects />
@@ -35,7 +35,7 @@ export const ProjectsCertPreview = () => {
 				</div>
 
 				<div>
-					<ul className='grid md:grid-cols-2 gap-5'>
+					<ul className='grid lg:grid-cols-2 gap-5'>
 						{projects.map((proj) => {
 							const isExpanded = expandedIds[proj.id];
 							const isLong = proj.description.length > CHAR_LIMIT;
@@ -125,13 +125,13 @@ const certificates = [
 
 function Certificates() {
 	return (
-		<section className='space-y-10 md:w-1/2'>
+		<section className='space-y-5'>
 			<h2 className='text-2xl flex items-center gap-3 font-bold'>
 				<AiOutlineSafetyCertificate />
 				<span>Certificates</span>
 			</h2>
 
-			<div className='grid gap-8  '>
+			<div className='grid gap-4  '>
 				{certificates.map((certificate) => (
 					<article
 						key={certificate.id}

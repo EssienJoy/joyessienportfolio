@@ -47,7 +47,7 @@ function Header() {
 							<span> Lagos, Nigeria</span>
 						</p>
 						<p className='font-semibold sm:text-xl text-center sm:text-left'>
-							Frontend Developer
+							Software Engineer
 						</p>
 
 						<div className='flex gap-2 mt-5'>

@@ -5,6 +5,31 @@ export const projects = [
 
     {
         id: 1,
+        image: "/images/voucherly.png",
+        title: "voucherly",
+        info: "Create, Edit and Manage Vouchers",
+        description:
+            "Voucherly is a full-stack voucher management platform that lets businesses create, edit, and track discount vouchers, and lets customers redeem them seamlessly across multiple channels.",
+        details:
+            "I built Voucherly as a full-stack application made up of a Next.js frontend and a Node.js/Express backend. Businesses can create vouchers with discount types, usage limits, and expiry dates, and redeem codes from a staff dashboard, a public redeem page, or through a secure API key for their own website. The project grew from a layered backend into a modular monolith, organized by feature modules (business, voucher, redemption) with services, controllers, routes, and models for each.",
+        implimentations: [
+            "Built a clean dashboard UI for creating, editing, and managing vouchers with Next.js and Tailwind CSS",
+            "Designed a full redemption flow: staff in-dashboard, public web, and an API-key-authenticated endpoint for business websites",
+            "Added email/password authentication with JWT cookies plus Google Sign-In",
+            "Generated scoped API keys (hash stored, shown once) for external integrations",
+            "Handled voucher lifecycle states — active, redeemed, exhausted, expired — with expiry and usage-limit enforcement",
+            "Refactored the backend into a modular monolith (business, voucher, redemption modules) for scalability",
+        ],
+        problem:
+            "Businesses need a simple way to create and distribute discount vouchers, and to redeem them consistently whether from a dashboard, a web page, or their own website.",
+        solution:
+            "A full-stack voucher platform with intuitive voucher management and multiple redemption channels (dashboard, public page, and a secure API for external sites).",
+        stack: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT"],
+        github: "https://github.com/EssienJoy/voucher",
+        live: "https://voucherly-three.vercel.app/",
+    },
+    {
+        id: 2,
         image: "/images/wildoasis.png",
         title: "Wild Oasis",
         info: "Cabin Booking Platform, Clean UI",
@@ -25,7 +50,7 @@ export const projects = [
         live: "https://the-wild-oasis-website-flax-one.vercel.app/",
     },
     {
-        id: 2,
+        id: 3,
         image: "/images/travel-agency.png",
         title: "Travel Agency",
         info: "An AI-powered travel planning platform",
@@ -54,7 +79,7 @@ export const projects = [
     },
 
     {
-        id: 3,
+        id: 4,
         image: "/images/planner-backend.png",
         title: "Planner Api",
         info: "Backend Api for planner app",
@@ -86,7 +111,7 @@ export const projects = [
 
     {
         note: info,
-        id: 4,
+        id: 5,
         image: '/images/calendarproject.png',
         title: "Planner",
         info: "Plan goals, Track Goals, Tick Completed goals",

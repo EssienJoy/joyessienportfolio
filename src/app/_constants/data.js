@@ -172,7 +172,7 @@ export const quickLinks = [
         url: "/contact",
     },
     {
-        text: "Download Cv",
+        text: "View Cv",
         url: "/essien-joy-cv.pdf",
     },
 ];

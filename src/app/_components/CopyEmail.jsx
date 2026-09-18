@@ -4,7 +4,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import toast from "react-hot-toast";
 
 export default function EmailCopy() {
-	const email = "essienjoyidaratechie@gmail.com";
+	const email = "talktoessienjoy@gmail.com";
 
 	const handleCopy = async () => {
 		await navigator.clipboard.writeText(email);
