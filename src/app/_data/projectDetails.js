@@ -49,37 +49,37 @@ export const projects = [
         github: "https://github.com/EssienJoy/the-wild-oasis-website",
         live: "https://the-wild-oasis-website-flax-one.vercel.app/",
     },
+    // {
+    //     id: 3,
+    //     image: "/images/travel-agency.png",
+    //     title: "Travel Agency",
+    //     info: "An AI-powered travel planning platform",
+    //     description:
+    //         "Built a modern full-stack travel application that allows users to generate personalized travel itineraries with AI, explore destinations, securely authenticate, and manage their trips through an intuitive interface. The application features a responsive UI, analytics dashboard, trip management system, and cloud-backed data persistence.",
+
+    //     problem:
+    //         "Planning a vacation often requires switching between multiple websites for destinations, accommodations, itineraries, and budgeting. This fragmented experience is time-consuming and overwhelming for travelers.",
+
+    //     solution:
+    //         "Developed a centralized AI-powered platform that generates customized travel plans based on user preferences while allowing users to manage trips from a single dashboard. The application streamlines travel planning through intelligent recommendations, secure authentication, cloud storage, and interactive data management.",
+
+    //     stack: [
+    //         "React",
+    //         "React Router",
+    //         "TypeScript",
+    //         "Tailwind CSS",
+    //         "Appwrite",
+    //         "Groq AI",
+    //         "Syncfusion",
+    //         "Sentry",
+    //     ],
+    //     github: "https://github.com/EssienJoy/travel-agency/tree/main",
+
+    //     live: "https://travel-agency-sigma-roan.vercel.app/signin"
+    // },
+
     {
         id: 3,
-        image: "/images/travel-agency.png",
-        title: "Travel Agency",
-        info: "An AI-powered travel planning platform",
-        description:
-            "Built a modern full-stack travel application that allows users to generate personalized travel itineraries with AI, explore destinations, securely authenticate, and manage their trips through an intuitive interface. The application features a responsive UI, analytics dashboard, trip management system, and cloud-backed data persistence.",
-
-        problem:
-            "Planning a vacation often requires switching between multiple websites for destinations, accommodations, itineraries, and budgeting. This fragmented experience is time-consuming and overwhelming for travelers.",
-
-        solution:
-            "Developed a centralized AI-powered platform that generates customized travel plans based on user preferences while allowing users to manage trips from a single dashboard. The application streamlines travel planning through intelligent recommendations, secure authentication, cloud storage, and interactive data management.",
-
-        stack: [
-            "React",
-            "React Router",
-            "TypeScript",
-            "Tailwind CSS",
-            "Appwrite",
-            "Groq AI",
-            "Syncfusion",
-            "Sentry",
-        ],
-        github: "https://github.com/EssienJoy/travel-agency/tree/main",
-
-        live: "https://travel-agency-sigma-roan.vercel.app/signin"
-    },
-
-    {
-        id: 4,
         image: "/images/planner-backend.png",
         title: "Planner Api",
         info: "Backend Api for planner app",
@@ -137,33 +137,33 @@ export const projects = [
     },
 
 
-    {
-        id: 5,
-        image: "/images/audophile.png",
-        title: "Audophile",
-        info: "Online Gadget Store",
-        description:
-            "Audophile is a high-end e-commerce web app built to showcase and sell premium audio products. It features a clean, modern interface inspired by the official Audiophile design challenge on Frontend Mentor, focusing on responsive layouts and smooth shopping interactions.",
-        details:
-            "This project demonstrates a strong grasp of component-based architecture, global state management, and data-driven UI updates. The site includes product filtering, category pages, dynamic product details, and a fully functional cart and checkout flow. Built using Next.js, Tailwind CSS, and React, it ensures optimized performance and accessibility across devices.",
-        implimentations: [
-            "Built with Next.js 14 App Router for improved routing and server-side rendering",
-            "Used Tailwind CSS for styling and responsive design consistency",
-            "Implemented Context API for global cart and product state management",
-            "Added dynamic routing for product detail pages",
-            "Integrated localStorage to persist cart data between sessions",
-            "Used Next Image optimization for performance and fast image loading",
-            "Deployed on Vercel for fast and reliable hosting"
-        ],
+    // {
+    //     id: 5,
+    //     image: "/images/audophile.png",
+    //     title: "Audophile",
+    //     info: "Online Gadget Store",
+    //     description:
+    //         "Audophile is a high-end e-commerce web app built to showcase and sell premium audio products. It features a clean, modern interface inspired by the official Audiophile design challenge on Frontend Mentor, focusing on responsive layouts and smooth shopping interactions.",
+    //     details:
+    //         "This project demonstrates a strong grasp of component-based architecture, global state management, and data-driven UI updates. The site includes product filtering, category pages, dynamic product details, and a fully functional cart and checkout flow. Built using Next.js, Tailwind CSS, and React, it ensures optimized performance and accessibility across devices.",
+    //     implimentations: [
+    //         "Built with Next.js 14 App Router for improved routing and server-side rendering",
+    //         "Used Tailwind CSS for styling and responsive design consistency",
+    //         "Implemented Context API for global cart and product state management",
+    //         "Added dynamic routing for product detail pages",
+    //         "Integrated localStorage to persist cart data between sessions",
+    //         "Used Next Image optimization for performance and fast image loading",
+    //         "Deployed on Vercel for fast and reliable hosting"
+    //     ],
 
-        problem: "Users need a seamless shopping experience for audio gadgets",
-        solution:
-            "Built an intuitive product browsing and checkout experience with cart persistence and responsive layouts",
+    //     problem: "Users need a seamless shopping experience for audio gadgets",
+    //     solution:
+    //         "Built an intuitive product browsing and checkout experience with cart persistence and responsive layouts",
 
-        stack: ["Next.js", "Tailwind CSS", "Convex"],
-        github: "https://github.com/EssienJoy/audiophile",
-        live: "https://audiophile-vxux.vercel.app/",
-    },
+    //     stack: ["Next.js", "Tailwind CSS", "Convex"],
+    //     github: "https://github.com/EssienJoy/audiophile",
+    //     live: "https://audiophile-vxux.vercel.app/",
+    // },
 
     // {
     //     note: info,
