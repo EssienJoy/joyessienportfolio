@@ -41,19 +41,21 @@ function Projects() {
 						</p>
 					</Reveal>
 
-					<Reveal>
-						<h2 className="text-balance text-3xl font-semibold tracking-tight text-heading sm:text-5xl">
-							Recent Projects
-						</h2>
-					</Reveal>
+<Reveal delay={100}>
+					<h2 className="text-balance text-3xl font-semibold tracking-tight text-heading sm:text-5xl">
+						Recent Projects
+					</h2>
+				</Reveal>
 				</div>
 
-				<Reveal>
-					<div className="mt-12 grid gap-6 sm:grid-cols-2">
-						{projects.map((project) => (
-							<article
-								key={project.id}
-								className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">
+				<div className="mt-12 grid gap-6 sm:grid-cols-2">
+					{projects.map((project, index) => (
+						<Reveal
+							key={project.id}
+							className="h-full"
+							variant={index % 2 === 0 ? "left" : "up"}
+							delay={Math.floor(index / 2) * 120}>
+							<article className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">
 								<figure className="relative aspect-video overflow-hidden">
 									<Image
 										src={project.image}
@@ -94,10 +96,11 @@ function Projects() {
 									</Link>
 								</div>
 							</article>
-						))}
-					</div>
-				</Reveal>
-				<div className="mt-16">
+						</Reveal>
+					))}
+				</div>
+<div className="mt-16">
+				<Reveal>
 					<div className="mx-auto max-w-3xl text-center">
 						<p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-foreground">
 							Credentials
@@ -107,12 +110,16 @@ function Projects() {
 							Certificates
 						</h2>
 					</div>
+				</Reveal>
 
-					<div className="mt-10 grid gap-4 sm:grid-cols-2">
-						{certificates.map((certificate) => (
-							<article
-								key={certificate.id}
-								className="grid gap-5 rounded-xl border border-border bg-surface p-5 sm:grid-cols-2">
+<div className="mt-10 grid gap-4 sm:grid-cols-2">
+					{certificates.map((certificate, index) => (
+						<Reveal
+							key={certificate.id}
+							className="h-full"
+							variant={index % 2 === 0 ? "left" : "up"}
+							delay={index * 150}>
+							<article className="grid h-full gap-5 rounded-xl border border-border bg-surface p-5 sm:grid-cols-2">
 								<figure className="relative aspect-[4/3] overflow-hidden rounded-lg">
 									<Image
 										src={certificate.image}
@@ -139,8 +146,9 @@ function Projects() {
 									</div>
 								</div>
 							</article>
-						))}
-					</div>
+						</Reveal>
+					))}
+				</div>
 				</div>
 			</Container>
 		</section>

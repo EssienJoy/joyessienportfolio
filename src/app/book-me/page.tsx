@@ -2,7 +2,7 @@ import { Clock, MessageSquareQuote, Zap } from "lucide-react"
 import type { Metadata } from "next"
 import NextLink from "next/link"
 
-import { Container, Link } from "@/components"
+import { BookingCalendar, Container, Link } from "@/components"
 import ContactMeForm from "./_components/ContactMeForm"
 import { socials } from "@/lib/constants/data"
 
@@ -92,13 +92,32 @@ function ContactMe() {
 						Request a quote
 					</Link>
 					<Link
-						href="https://wa.me/2348087152901"
-						target="_blank"
-						rel="noopener noreferrer"
+						href="#book-a-call"
 						variant="outline"
 						className="w-full sm:w-auto">
 						Book a call
 					</Link>
+				</div>
+
+				<div
+					id="book-a-call"
+					className="mx-auto mt-20 max-w-3xl">
+					<h2
+						className="text-center text-2xl 
+						font-semibold tracking-tight 
+						text-heading sm:text-3xl">
+						Book a call
+					</h2>
+					<p className="mt-3 text-center text-muted">
+						Pick a time that works for you. A Google Meet link is
+						customized automatically for every booking.
+					</p>
+
+					<div
+						className="mt-8 overflow-hidden rounded-2xl 
+						border border-border bg-surface">
+						<BookingCalendar />
+					</div>
 				</div>
 
 				<div

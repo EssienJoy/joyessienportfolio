@@ -1,50 +1,32 @@
-"use client";
+import type { ReactNode } from "react"
 
-import { useEffect, useRef, useState } from "react";
-import type { ReactNode } from "react";
-
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 type RevealProps = {
-	children: ReactNode;
-	className?: string;
-	delay?: number;
-};
+	children: ReactNode
+	className?: string
+	delay?: number
+	variant?: "up" | "left"
+}
 
-function Reveal({ children, className, delay = 0 }: RevealProps) {
-	const ref = useRef<HTMLDivElement>(null);
-	const [visible, setVisible] = useState(false);
-
-	useEffect(() => {
-		const el = ref.current;
-		if (!el) return;
-
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					setVisible(true);
-					observer.disconnect();
-				}
-			},
-			{ threshold: 0.15 },
-		);
-
-		observer.observe(el);
-		return () => observer.disconnect();
-	}, []);
-
+function Reveal({
+	children,
+	className,
+	delay = 0,
+	variant = "up",
+}: RevealProps) {
 	return (
 		<div
-			ref={ref}
-			style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+			style={delay ? { animationDelay: `${delay}ms` } : undefined}
 			className={cn(
-				"transition-all duration-700 ease-out will-change-transform",
-				visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
+				variant === "left"
+					? "animate-reveal-left"
+					: "animate-reveal-up",
 				className,
 			)}>
 			{children}
 		</div>
-	);
+	)
 }
 
-export default Reveal;
+export default Reveal

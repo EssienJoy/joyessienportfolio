@@ -101,8 +101,7 @@ function WhatWeOffer() {
 								</Link>
 
 								<p className="mt-4 text-center text-xs text-muted">
-									or reach out on Facebook / WhatsApp / X
-									(Twitter)
+									or reach out on Facebook / X (Twitter)
 								</p>
 							</div>
 						</div>

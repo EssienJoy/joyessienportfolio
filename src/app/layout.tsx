@@ -8,7 +8,6 @@ import {
 	ScrollToTop,
 	ToggleModeProvider,
 	ToggleProvider,
-	WhatsAppButton,
 } from "@/components"
 import { Footer, Header } from "@/app/(home)/_components"
 
@@ -50,7 +49,6 @@ export default async function RootLayout({
 						<main>{children}</main>
 						<Footer />
 						<ScrollToTop />
-						<WhatsAppButton />
 
 						<Toaster
 							position="top-center"

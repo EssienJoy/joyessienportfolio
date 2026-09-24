@@ -24,7 +24,7 @@ function ScrollToTop() {
 			aria-label="Scroll back to top"
 			onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 			className={cn(
-				"fixed bottom-24 right-6 z-50 inline-flex size-12 items-center justify-center rounded-full bg-accent text-primary shadow-lg transition-all duration-300 hover:bg-accent/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background dark:text-white",
+				"fixed bottom-6 right-6 z-50 inline-flex size-12 items-center justify-center rounded-full bg-accent text-primary shadow-lg transition-all duration-300 hover:bg-accent/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background dark:text-white",
 				visible
 					? "translate-y-0 opacity-100"
 					: "pointer-events-none translate-y-4 opacity-0",

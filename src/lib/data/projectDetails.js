@@ -9,7 +9,7 @@ export const projects = [
         title: "voucherly",
         info: "Create, Edit and Manage Vouchers",
         description:
-            "Voucherly is a full-stack voucher management platform that lets businesses create, edit, and track discount vouchers with usage limits, discount types, and expiry dates. Customers can redeem vouchers seamlessly from a staff dashboard, a public redeem page, or directly on a business's own website through a secure API key. It includes email/password authentication with JWT cookies, Google sign-in, and scoped API keys for external integrations. The backend is organized as a modular monolith, making it easy to maintain and scale as the product grows.",
+            "Create, track, and redeem discount vouchers across a dashboard, public page, or your own website.",
         details:
             "I built Voucherly as a full-stack application made up of a Next.js frontend and a Node.js/Express backend. Businesses can create vouchers with discount types, usage limits, and expiry dates, and redeem codes from a staff dashboard, a public redeem page, or through a secure API key for their own website. The project grew from a layered backend into a modular monolith, organized by feature modules (business, voucher, redemption) with services, controllers, routes, and models for each.",
         implimentations: [
@@ -34,7 +34,7 @@ export const projects = [
         title: "Wild Oasis",
         info: "Cabin Booking Platform, Clean UI",
         description:
-            "Wild Oasis is a modern booking platform designed for reserving cabins with simplicity and clarity at its core. It offers a clean, responsive interface for browsing cabin listings, viewing details, and making reservations. The UI focuses on clear visual hierarchy, spacing, and accessibility across all devices. Built to give users a smooth, professional booking experience without the clutter of typical booking platforms.",
+            "A clean, modern platform for browsing cabins and reserving a stay in just a few clicks.",
         details:
             "I built Wild Oasis as a responsive web application using Next.js and Tailwind CSS. The project focuses on creating a clean UI for browsing cabins, viewing details, and making reservations, while maintaining a professional and intuitive layout.",
         implementations: [
@@ -86,7 +86,7 @@ export const projects = [
         title: "Planner",
         info: "Plan goals, Track Goals, Tick Completed goals",
         description:
-            "Planner is a full-stack event and goal tracking app with a neumorphic UI that helps users create events, set actionable goals leading up to them, and tick off completed goals along the way. The React frontend handles event timers, countdowns, and goal progress with TanStack Query for API data and date-fns for calendar handling. Auth and planner tasks run on a Node.js and Express backend with MongoDB, secured with JWT-based authentication and protected routes. Every plan, tick, and reminder stays in sync between the frontend and the API, making it one complete product.",
+            "Set goals, track progress, and tick them off as you count down to your big event.",
         details:
             "After completing the React section of Jonas Schmedtmann’s course, I designed and developed Planner from scratch using Styled Components and React. The app features a modern neumorphic interface, intuitive state management, and modular component architecture. Users can create events, set goals toward each event, and visually track their progress in an organized and engaging way.",
         implimentations: [
