@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Raw palette ---------- */
+:root {
+  /* warm neutrals */
+  --cream: #f6f1eb;
+  --sand: #ECE2D8;
+  --tan-200: #e4dbd0;
+  --tan-400: #b0a79b;
+  --tan-600: #8a8074;
+  --paper: #fffdf9;
+  --grey-soft: #cfc9c1;
+
+  /* inks */
+  --ink: #231E1A;
+  --ink-soft: #3a332c;
+  --ink-black: #17130f;
+
+  /* ---------- Semantic tokens (light) ---------- */
+  --background: var(--cream);
+  --foreground: var(--ink-soft);
+  --heading: var(--ink);
+  --surface: var(--paper);
+  --card: var(--paper);
+  --accent: #ED7D31;
+  --text-muted: var(--tan-600);
+  --text-faint: var(--tan-400);
+  --border: var(--tan-200);
+  --ring: var(--tan-400);
+
+  --primary: var(--ink);
+  --primary-black: var(--ink-black);
+  --primary-white: #ffffff;
+  --primary-grey: var(--grey-soft);
+
+  color-scheme: light;
+}
+
+/* ---------- Semantic tokens (dark) ---------- */
+.dark {
+  --background: #08001a;
+  --foreground: #ede8ee;
+  --heading: #f5f1ea;
+  --surface: #140c29;
+  --card: #140c29;
+  --accent: #37295c;
+  --text-muted: #b4a9c2;
+  --text-faint: #8a7f97;
+  --border: #342752;
+  --ring: #675a87;
+
+  --primary: #140c29;
+  --primary-black: #08001a;
+  --primary-white: #ffffff;
+  --primary-grey: #cfc9c1;
+
+  --ink: #f5f1ea;
+  --ink-soft: #ede8ee;
+
+  color-scheme: dark;
+}
+
+/* ---------- Map tokens to Tailwind color utilities ---------- */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-muted: var(--text-muted);
+  --color-faint: var(--text-faint);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --color-primary: var(--primary);
+  --color-primary-black: var(--primary-black);
+  --color-primary-white: var(--primary-white);
+  --color-primary-grey: var(--primary-grey);
+
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-ink: var(--ink);
+
+  --font-sans: var(--font-space-grotesk),
+    ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
+  --font-display: var(--font-space-grotesk),
+    ui-sans-serif, system-ui,
+    -apple-system, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+/* ---------- Radius scale ---------- */
+@theme {
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+/* ---------- Base styles ---------- */
+@layer base {
+
+  *,
+  ::after,
+  ::before {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-space-grotesk), ui-sans-serif, system-ui,
+      -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading);
+    font-family: var(--font-space-grotesk), ui-sans-serif, system-ui,
+      -apple-system, sans-serif;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--primary);
+    color: var(--surface);
+  }
+
+  button {
+    cursor: pointer;
+  }
+}

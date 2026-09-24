@@ -1,0 +1,198 @@
+
+const info = 'This project is currently linked externally or is undergoing a work in-progress, but will soon be available here on the website.';
+
+export const projects = [
+
+    {
+        id: 1,
+        image: "/images/voucherly.png",
+        title: "voucherly",
+        info: "Create, Edit and Manage Vouchers",
+        description:
+            "Voucherly is a full-stack voucher management platform that lets businesses create, edit, and track discount vouchers with usage limits, discount types, and expiry dates. Customers can redeem vouchers seamlessly from a staff dashboard, a public redeem page, or directly on a business's own website through a secure API key. It includes email/password authentication with JWT cookies, Google sign-in, and scoped API keys for external integrations. The backend is organized as a modular monolith, making it easy to maintain and scale as the product grows.",
+        details:
+            "I built Voucherly as a full-stack application made up of a Next.js frontend and a Node.js/Express backend. Businesses can create vouchers with discount types, usage limits, and expiry dates, and redeem codes from a staff dashboard, a public redeem page, or through a secure API key for their own website. The project grew from a layered backend into a modular monolith, organized by feature modules (business, voucher, redemption) with services, controllers, routes, and models for each.",
+        implimentations: [
+            "Built a clean dashboard UI for creating, editing, and managing vouchers with Next.js and Tailwind CSS",
+            "Designed a full redemption flow: staff in-dashboard, public web, and an API-key-authenticated endpoint for business websites",
+            "Added email/password authentication with JWT cookies plus Google Sign-In",
+            "Generated scoped API keys (hash stored, shown once) for external integrations",
+            "Handled voucher lifecycle states — active, redeemed, exhausted, expired — with expiry and usage-limit enforcement",
+            "Refactored the backend into a modular monolith (business, voucher, redemption modules) for scalability",
+        ],
+        problem:
+            "Businesses need a simple way to create and distribute discount vouchers, and to redeem them consistently whether from a dashboard, a web page, or their own website.",
+        solution:
+            "A full-stack voucher platform with intuitive voucher management and multiple redemption channels (dashboard, public page, and a secure API for external sites).",
+        stack: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT"],
+        github: "https://github.com/EssienJoy/voucher",
+        live: "https://voucherly-three.vercel.app/",
+    },
+    {
+        id: 2,
+        image: "/images/wildoasis.png",
+        title: "Wild Oasis",
+        info: "Cabin Booking Platform, Clean UI",
+        description:
+            "Wild Oasis is a modern booking platform designed for reserving cabins with simplicity and clarity at its core. It offers a clean, responsive interface for browsing cabin listings, viewing details, and making reservations. The UI focuses on clear visual hierarchy, spacing, and accessibility across all devices. Built to give users a smooth, professional booking experience without the clutter of typical booking platforms.",
+        details:
+            "I built Wild Oasis as a responsive web application using Next.js and Tailwind CSS. The project focuses on creating a clean UI for browsing cabins, viewing details, and making reservations, while maintaining a professional and intuitive layout.",
+        implementations: [
+            "Designed a responsive booking interface with Next.js and Tailwind CSS",
+            "Built clean and reusable UI components for listings and details pages",
+            "Focused on clear visual hierarchy and spacing for better usability",
+            "Ensured accessibility and cross-device responsiveness",
+        ],
+        problem: "Many booking platforms feel cluttered and overwhelming for users",
+        solution: "A clean, minimal booking interface that makes browsing and reserving cabins simple and intuitive",
+        stack: ["Next.js", "Tailwind CSS", "Supabase"],
+        github: "https://github.com/EssienJoy/the-wild-oasis-website",
+        live: "https://the-wild-oasis-website-flax-one.vercel.app/",
+    },
+    // {
+    //     id: 3,
+    //     image: "/images/travel-agency.png",
+    //     title: "Travel Agency",
+    //     info: "An AI-powered travel planning platform",
+    //     description:
+    //         "Built a modern full-stack travel application that allows users to generate personalized travel itineraries with AI, explore destinations, securely authenticate, and manage their trips through an intuitive interface. The application features a responsive UI, analytics dashboard, trip management system, and cloud-backed data persistence.",
+
+    //     problem:
+    //         "Planning a vacation often requires switching between multiple websites for destinations, accommodations, itineraries, and budgeting. This fragmented experience is time-consuming and overwhelming for travelers.",
+
+    //     solution:
+    //         "Developed a centralized AI-powered platform that generates customized travel plans based on user preferences while allowing users to manage trips from a single dashboard. The application streamlines travel planning through intelligent recommendations, secure authentication, cloud storage, and interactive data management.",
+
+    //     stack: [
+    //         "React",
+    //         "React Router",
+    //         "TypeScript",
+    //         "Tailwind CSS",
+    //         "Appwrite",
+    //         "Groq AI",
+    //         "Syncfusion",
+    //         "Sentry",
+    //     ],
+    //     github: "https://github.com/EssienJoy/travel-agency/tree/main",
+
+    //     live: "https://travel-agency-sigma-roan.vercel.app/signin"
+    // },
+
+{
+
+        note: info,
+        id: 5,
+        image: '/images/calendarproject.png',
+        title: "Planner",
+        info: "Plan goals, Track Goals, Tick Completed goals",
+        description:
+            "Planner is a full-stack event and goal tracking app with a neumorphic UI that helps users create events, set actionable goals leading up to them, and tick off completed goals along the way. The React frontend handles event timers, countdowns, and goal progress with TanStack Query for API data and date-fns for calendar handling. Auth and planner tasks run on a Node.js and Express backend with MongoDB, secured with JWT-based authentication and protected routes. Every plan, tick, and reminder stays in sync between the frontend and the API, making it one complete product.",
+        details:
+            "After completing the React section of Jonas Schmedtmann’s course, I designed and developed Planner from scratch using Styled Components and React. The app features a modern neumorphic interface, intuitive state management, and modular component architecture. Users can create events, set goals toward each event, and visually track their progress in an organized and engaging way.",
+        implimentations: [
+            "Implemented TanStack Query (React Query) for efficient API data management",
+            "Built custom hooks for reusability across the app",
+            "Used a neumorphic UI library for visual elements such as the dashboard clock",
+            "Integrated date-fns for date and calendar handling",
+            "Added React Hot Toast for real-time notifications",
+            "Simulated authentication with JSON Server (fake auth for demonstration purposes)",
+        ],
+
+        problem: "Users struggling to complete a task",
+        solution: "Create Plans,Track goals,Countdown and reminders",
+
+        stack: ["React", "Tailwind", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT"],
+        github: "https://github.com/EssienJoy/planner",
+        live: "https://planner-six-chi.vercel.app/",
+    },
+
+
+    // {
+    //     id: 5,
+    //     image: "/images/audophile.png",
+    //     title: "Audophile",
+    //     info: "Online Gadget Store",
+    //     description:
+    //         "Audophile is a high-end e-commerce web app built to showcase and sell premium audio products. It features a clean, modern interface inspired by the official Audiophile design challenge on Frontend Mentor, focusing on responsive layouts and smooth shopping interactions.",
+    //     details:
+    //         "This project demonstrates a strong grasp of component-based architecture, global state management, and data-driven UI updates. The site includes product filtering, category pages, dynamic product details, and a fully functional cart and checkout flow. Built using Next.js, Tailwind CSS, and React, it ensures optimized performance and accessibility across devices.",
+    //     implimentations: [
+    //         "Built with Next.js 14 App Router for improved routing and server-side rendering",
+    //         "Used Tailwind CSS for styling and responsive design consistency",
+    //         "Implemented Context API for global cart and product state management",
+    //         "Added dynamic routing for product detail pages",
+    //         "Integrated localStorage to persist cart data between sessions",
+    //         "Used Next Image optimization for performance and fast image loading",
+    //         "Deployed on Vercel for fast and reliable hosting"
+    //     ],
+
+    //     problem: "Users need a seamless shopping experience for audio gadgets",
+    //     solution:
+    //         "Built an intuitive product browsing and checkout experience with cart persistence and responsive layouts",
+
+    //     stack: ["Next.js", "Tailwind CSS", "Convex"],
+    //     github: "https://github.com/EssienJoy/audiophile",
+    //     live: "https://audiophile-vxux.vercel.app/",
+    // },
+
+    // {
+    //     note: info,
+    //     id: 5,
+    //     image: '/images/eazymart.png',
+    //     title: "Eazy Mart",
+    //     info: "Window Shopping From Home",
+    //     description:
+    //         "Eazy Mart is a modern e-commerce web app that brings the window-shopping experience online, allowing users to explore products from the comfort of their home.",
+    //     details:
+    //         "I built Eazy Mart using Tailwind CSS and vanilla JavaScript to simulate a clean, fast, and responsive shopping interface. The project focuses on replicating the browsing and discovery aspect of window shopping, giving users a seamless way to scroll through product cards with an engaging UI.",
+    //     implimentations: [
+    //         "Developed a responsive UI using Tailwind CSS",
+    //         "Created reusable product card components for scalability",
+    //         "Implemented cart preview interactions for better shopping flow",
+    //         "Designed with user-friendly navigation to simulate a real store experience",
+    //     ],
+
+    //     problem: "Users want the joy of window shopping without leaving home",
+    //     solution: "Interactive product browsing and clean UI design",
+
+    //     stack: ["Tailwind Css", "JavaScript", "Html"],
+    //     github: "https://github.com/EssienJoy/eazymart",
+    //     live: "/wip",
+    // },
+
+];
+
+export const otherProjects = [
+    {
+        image: '/images/personalportfolio.png',
+        title: "Personal Portfolio",
+        link: "https://github.com/EssienJoy/joyessienportfolio",
+        stack: ['Next js', 'Tailwind ']
+    },
+    {
+        image: '/images/myazaclone.png',
+        title: "My Aza",
+        link: "https://github.com/EssienJoy/myazaClone",
+        stack: ["HTML", "CSS", "JavaScript"]
+
+    },
+    // {
+    //     image: '/images/wildoasis.png',
+    //     title: "Wild Oasis",
+    //     link: "https://github.com/EssienJoy/the-wild-oasis-website",
+    //     stack: ['React', 'Tailwind ', 'Supabase']
+    // },
+    // {
+    //     image: '/images/cartolink.png',
+    //     title: "cartolink",
+    //     link: "https://github.com/EssienJoy/cartolink",
+    //     stack: ['Next js', 'Tailwind ']
+    // },
+    {
+        image: '/images/bankist.png',
+        title: "Bankist",
+        link: "https://github.com/EssienJoy/bankistMinFinanceWebApp",
+        stack: ['JavaScript', 'Css ']
+    },
+
+];;
