@@ -31,7 +31,7 @@ function ContactMe() {
 	return (
 		<section id="contactme" className="py-8">
 			<Container>
-				<header className=" mt-8">
+				<header className=" mt-8" data-aos="fade-up">
 					<h1
 						className="text-balance text-muted text-md 
 					font-semibold tracking-tight
@@ -57,11 +57,15 @@ function ContactMe() {
 				</header>
 
 				<div
+					data-aos="fade-up"
+					data-aos-delay="100"
 					className="mt-12 grid gap-5 
 				sm:grid-cols-2 lg:grid-cols-3">
-					{benefits.map(({ icon: Icon, title, text }) => (
+					{benefits.map(({ icon: Icon, title, text }, index) => (
 						<div
 							key={title}
+							data-aos="fade-up"
+							data-aos-delay={index * 100}
 							className="rounded-xl border border-border
 							 bg-surface p-6">
 							<span
@@ -85,6 +89,8 @@ function ContactMe() {
 				</div>
 
 				<div
+					data-aos="fade-up"
+					data-aos-delay="150"
 					className="mt-10 flex flex-col
 				 items-center justify-center 
 				 gap-4 sm:flex-row">
@@ -100,6 +106,7 @@ function ContactMe() {
 				</div>
 
 				<div
+					data-aos="fade-up"
 					id="contact-form"
 					className="mx-auto 
 				mt-20 max-w-2xl">
@@ -116,7 +123,7 @@ function ContactMe() {
 						<ContactMeForm />
 					</div>
 				</div>
-				<div id="book-a-call" className="mx-auto mt-20 max-w-3xl">
+				<div id="book-a-call" data-aos="fade-up" className="mx-auto mt-20 max-w-3xl">
 					<h2
 						className="text-center text-2xl 
 						font-semibold tracking-tight 
