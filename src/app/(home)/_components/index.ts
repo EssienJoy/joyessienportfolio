@@ -3,7 +3,6 @@ export { default as Reviews } from "./Reviews";
 export { default as WhatYouGet } from "./WhatYouGet";
 export { default as WhatWeDo } from "./WhatWeDo";
 export { default as WhatWeOffer } from "./WhatWeOffer";
-export { default as Reveal } from "./Reveal";
 export { default as WhyTrustUs } from "./WhyTrustUs";
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";

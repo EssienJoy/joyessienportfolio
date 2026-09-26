@@ -203,7 +203,7 @@ function ContactMeForm() {
 			<ValidationError errors={state.errors} />
 			{state.succeeded && (
 				<div className="flex items-start gap-3 rounded-xl border border-accent bg-accent/20 p-4">
-					<Check className="mt-0.5 size-5 shrink-0 text-primary dark:text-background" />
+					<Check className="mt-0.5 size-5 shrink-0 text-primary dark:text-white" />
 					<p className="text-sm text-foreground">
 						Thank you! Your submission has been received. We&apos;ll
 						get back to you within 24 hours.

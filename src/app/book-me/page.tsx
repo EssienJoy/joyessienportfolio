@@ -47,7 +47,7 @@ function ContactMe() {
 						Get in touch — or reach out directly on {""}
 						{socials.map((s) => (
 							<NextLink
-								className="text-accent"
+								className="text-accent dark:text-blue-300"
 								key={s.href}
 								href={s.href}>
 								{s.text}/{" "}
@@ -100,8 +100,23 @@ function ContactMe() {
 				</div>
 
 				<div
-					id="book-a-call"
-					className="mx-auto mt-20 max-w-3xl">
+					id="contact-form"
+					className="mx-auto 
+				mt-20 max-w-2xl">
+					<h2
+						className="text-center text-2xl 
+					font-semibold tracking-tight 
+					text-heading sm:text-3xl">
+						Contact information
+					</h2>
+
+					<div
+						className="mt-8 rounded-2xl border
+					 border-border bg-surface p-6 sm:p-8">
+						<ContactMeForm />
+					</div>
+				</div>
+				<div id="book-a-call" className="mx-auto mt-20 max-w-3xl">
 					<h2
 						className="text-center text-2xl 
 						font-semibold tracking-tight 
@@ -117,24 +132,6 @@ function ContactMe() {
 						className="mt-8 overflow-hidden rounded-2xl 
 						border border-border bg-surface">
 						<BookingCalendar />
-					</div>
-				</div>
-
-				<div
-					id="contact-form"
-					className="mx-auto 
-				mt-20 max-w-2xl">
-					<h2
-						className="text-center text-2xl 
-					font-semibold tracking-tight 
-					text-heading sm:text-3xl">
-						Contact information
-					</h2>
-
-					<div
-						className="mt-8 rounded-2xl border
-					 border-border bg-surface p-6 sm:p-8">
-						<ContactMeForm />
 					</div>
 				</div>
 			</Container>

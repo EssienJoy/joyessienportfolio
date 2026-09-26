@@ -1,7 +1,6 @@
 import { Award, Heart, Rocket, Users } from "lucide-react"
 
 import { Container } from "@/components"
-import Reveal from "./Reveal"
 
 const stats = [
 	{ icon: Users, value: "5+", label: "Satisfied Clients" },
@@ -15,63 +14,53 @@ function WhyTrustUs() {
 		<section className="my-20">
 			<Container>
 				<div className="max-w-3xl">
-					<Reveal>
-						<p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-foreground">
-							My Story
-						</p>
-					</Reveal>
+					<p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-foreground">
+						My Story
+					</p>
 
-					<Reveal delay={100}>
-						<h2 className="text-balance text-3xl font-semibold tracking-tight text-heading sm:text-5xl">
-							Creating Digital{" "}
-							<span className="rounded-lg bg-accent px-2 text-primary dark:text-white">
-								Experiences That Convert
-							</span>
-						</h2>
-					</Reveal>
+					<h2 className="text-balance text-3xl font-semibold tracking-tight text-heading sm:text-5xl">
+						Creating Digital{" "}
+						<span className="rounded-lg bg-accent px-2 text-primary dark:text-white">
+							Experiences That Convert
+						</span>
+					</h2>
 
 					<div className="mt-8 space-y-5 text-lg leading-relaxed text-muted">
-						<Reveal delay={200}>
-							<p>
-								I specialize in transforming visions into
-								conversion-driven websites. My work blends
-								creative innovation with functional design to
-								craft digital experiences that inspire action.
-							</p>
-						</Reveal>
-						<Reveal delay={300}>
-							<p>
-								I deeply understand your customers, refine your
-								product, and align with your strategy to solve
-								real problems. From startups to established
-								businesses — no templates, no shortcuts.
-							</p>
-						</Reveal>
+						<p>
+							I specialize in transforming visions into
+							conversion-driven websites. My work blends creative
+							innovation with functional design to craft digital
+							experiences that inspire action.
+						</p>
+						<p>
+							I deeply understand your customers, refine your
+							product, and align with your strategy to solve real
+							problems. From startups to established businesses —
+							no templates, no shortcuts.
+						</p>
 					</div>
 				</div>
 
-				<Reveal delay={400} className="mt-14">
-					<section className="grid grid-cols-2 gap-5">
-						{stats.map((stat) => (
+				<section className="mt-14 grid grid-cols-2 gap-5">
+					{stats.map((stat) => (
+						<div
+							key={stat.label}
+							className="cursor-pointer rounded-xl border border-border bg-surface p-6 text-center transition-transform hover:-translate-y-1">
 							<div
-								key={stat.label}
-								className="cursor-pointer rounded-xl border border-border bg-surface p-6 text-center transition-transform hover:-translate-y-1">
-								<div
-									className="mx-auto mb-4 inline-flex 
+								className="mx-auto mb-4 inline-flex
 								size-11 items-center justify-center rounded-full
-								 bg-accent text-primary dark:text-white">
-									<stat.icon className="size-5" />
-								</div>
-								<p className="text-3xl font-bold text-heading sm:text-4xl">
-									{stat.value}
-								</p>
-								<p className="mt-1 text-sm text-muted">
-									{stat.label}
-								</p>
+								bg-accent text-primary dark:text-white">
+								<stat.icon className="size-5" />
 							</div>
-						))}
-					</section>
-				</Reveal>
+							<p className="text-3xl font-bold text-heading sm:text-4xl">
+								{stat.value}
+							</p>
+							<p className="mt-1 text-sm text-muted">
+								{stat.label}
+							</p>
+						</div>
+					))}
+				</section>
 			</Container>
 		</section>
 	)

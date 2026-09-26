@@ -1,16 +1,13 @@
 "use client"
 
-const CAL_COM_LINK =
-	"https://cal.com/book-a-software-development-call?embed=true&embedType=inline&theme=light"
+import Cal from "@calcom/embed-react"
 
 function BookingCalendar() {
 	return (
-		<iframe
-			src={CAL_COM_LINK}
-			title="Schedule a call"
-			loading="lazy"
-			className="h-[700px] w-full rounded-2xl
-			 border border-border bg-surface"
+		<Cal
+			calLink="essien-joy-rba5dj/book-a-web-development-call"
+			style={{ width: "100%", height: "100%", overflow: "scroll" }}
+			config={{ layout: "month_view" }}
 		/>
 	)
 }

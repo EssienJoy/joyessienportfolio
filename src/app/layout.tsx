@@ -20,11 +20,11 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
 	title: {
-		template: "% | Essien — Web Design & Development ",
-		default: "  Essien — Web Design & Development",
+		template: "%s | Essien — Web Design & Development",
+		default: "Essien — Web Design & Development",
 	},
-	description: `Website design, Website development,
-		 Software development and Seo optimization`,
+	description:
+		"Website design, website development, software development and SEO optimization.",
 }
 
 export default async function RootLayout({

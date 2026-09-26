@@ -12,8 +12,12 @@ type LinkProps = React.ComponentProps<typeof NextLink> & {
 };
 
 const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
-	({ className, variant = "default", size = "default", ...props }) => (
+	(
+		{ className, variant = "default", size = "default", ...props },
+		ref,
+	) => (
 		<NextLink
+			ref={ref}
 			className={cn(buttonVariants({ variant, size, className }))}
 			{...props}
 		/>
