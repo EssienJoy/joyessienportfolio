@@ -5,6 +5,7 @@ import { cookies } from "next/headers"
 
 import "@/app/globals.css"
 import {
+	ScrollAnimations,
 	ScrollToTop,
 	ToggleModeProvider,
 	ToggleProvider,
@@ -49,6 +50,7 @@ export default async function RootLayout({
 						<main>{children}</main>
 						<Footer />
 						<ScrollToTop />
+					<ScrollAnimations />
 
 						<Toaster
 							position="top-center"

@@ -13,7 +13,7 @@ function WhyTrustUs() {
 	return (
 		<section className="my-20">
 			<Container>
-				<div className="max-w-3xl">
+				<div data-aos="fade-right" className="max-w-3xl">
 					<p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-foreground">
 						My Story
 					</p>
@@ -42,9 +42,11 @@ function WhyTrustUs() {
 				</div>
 
 				<section className="mt-14 grid grid-cols-2 gap-5">
-					{stats.map((stat) => (
+					{stats.map((stat, index) => (
 						<div
 							key={stat.label}
+							data-aos="fade-up"
+							data-aos-delay={index * 100}
 							className="cursor-pointer rounded-xl border border-border bg-surface p-6 text-center transition-transform hover:-translate-y-1">
 							<div
 								className="mx-auto mb-4 inline-flex

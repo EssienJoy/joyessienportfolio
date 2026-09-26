@@ -35,7 +35,7 @@ function Faq() {
 	return (
 		<section id="faq" className="my-20">
 			<Container>
-				<div className="mx-auto max-w-3xl">
+				<div data-aos="fade-up" className="mx-auto max-w-3xl">
 					<p className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-foreground">
 						Some questionaires
 					</p>

@@ -26,8 +26,9 @@ function Projects() {
 	return (
 		<section id="projects" className="my-20">
 			<Container>
-				<div className="max-w-3xl">
+				<div data-aos="fade-up" className="max-w-3xl">
 					<p
+						data-aos="fade-up"
 						className="inline-flex items-center gap-2 rounded-full
 						bg-accent px-4 py-1.5 text-sm font-medium text-primary
 						dark:text-white">
@@ -44,9 +45,11 @@ function Projects() {
 				</div>
 
 				<div className="mt-12 grid gap-6 sm:grid-cols-2">
-					{projects.map((project) => (
+					{projects.map((project, index) => (
 						<article
 							key={project.id}
+							data-aos="fade-up"
+							data-aos-delay={index * 100}
 							className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface">
 							<figure className="relative aspect-video overflow-hidden">
 								<Image
@@ -92,7 +95,7 @@ function Projects() {
 				</div>
 
 				<div className="mt-16">
-					<div className="mx-auto max-w-3xl text-center">
+					<div data-aos="fade-up" className="mx-auto max-w-3xl text-center">
 						<p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-foreground">
 							Credentials
 						</p>
@@ -103,9 +106,11 @@ function Projects() {
 					</div>
 
 					<div className="mt-10 grid gap-4 sm:grid-cols-2">
-						{certificates.map((certificate) => (
+						{certificates.map((certificate, index) => (
 							<article
 								key={certificate.id}
+								data-aos="fade-up"
+								data-aos-delay={index * 100}
 								className="grid h-full gap-5 rounded-xl border border-border bg-surface p-5 sm:grid-cols-2">
 								<figure className="relative aspect-[4/3] overflow-hidden rounded-lg">
 									<Image

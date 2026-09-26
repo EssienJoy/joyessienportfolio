@@ -1,6 +1,7 @@
 export { Button, buttonVariants } from "./ui/button"
 export type { ButtonProps } from "./ui/button"
 export { default as ScrollToTop } from "./ScrollToTop"
+export { default as ScrollAnimations } from "./ScrollAnimations"
 export { default as BookingCalendar } from "./BookingCalendar"
 export { default as SectionHeading } from "./SectionHeading"
 export { default as Container } from "./Container"

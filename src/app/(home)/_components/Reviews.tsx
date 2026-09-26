@@ -34,7 +34,7 @@ function Reviews() {
 	return (
 		<section id="reviews" className="my-20">
 			<Container>
-				<div className="mx-auto max-w-3xl text-center">
+				<div data-aos="fade-up" className="mx-auto max-w-3xl text-center">
 					<p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-foreground">
 						Clients say about us
 					</p>
@@ -50,9 +50,11 @@ function Reviews() {
 				</div>
 
 				<div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-					{reviews.map((review) => (
+					{reviews.map((review, index) => (
 						<article
 							key={review.name}
+							data-aos="fade-up"
+							data-aos-delay={index * 100}
 							className="flex h-full flex-col rounded-xl border border-border bg-surface p-6">
 							<div className="mb-4 flex items-center gap-3">
 								{review.company && (
