@@ -1,0 +1,19 @@
+
+> joydevstudio@0.1.0 dev
+> next dev --webpack & npx next-video sync -w
+
+⚠ Port 3000 is in use by process 19392, using available port 3001 instead.
+▲ Next.js 16.3.6 (webpack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.210.196:3001
+- Environments: .env.local
+✓ Ready in 12.0s
+⨯ Failed to load next.config.mjs, see more info here https://nextjs.org/docs/messages/next-config-error
+Error: Cannot find package 'next-video' imported from C:\Users\user\OneDrive\Desktop\projects\joyessienportfolio\next.config.mjs
+    at ignore-listed frames {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+[?25h
+Need to install the following packages:
+next-video@2.8.1
+Ok to proceed? (y) 
