@@ -1,4 +1,4 @@
-import { Faq, Hero, Projects, Reviews, WhatYouGet, WhyTrustUs } from "./_components"
+import { Faq, Hero, Projects, WhatYouGet, WhyTrustUs } from "./_components"
 
 export default function Home() {
 	return (
@@ -7,7 +7,6 @@ export default function Home() {
 			<WhyTrustUs />
 			<Projects />
 			<WhatYouGet />
-			<Reviews />
 			<Faq />
 		</>
 	)
