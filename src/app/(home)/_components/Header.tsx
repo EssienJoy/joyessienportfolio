@@ -1,54 +1,30 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { ArrowRightIcon } from "lucide-react"
-import Image from "next/image"
 import NextLink from "next/link"
+import { ArrowRight } from "lucide-react"
 
-import { cn } from "@/lib/utils"
 import { Container, Link, ToggleModeBtn } from "@/components"
 
 function Header() {
-	const [scrolled, setScrolled] = useState(false)
-
-	useEffect(() => {
-		const onScroll = () => setScrolled(window.scrollY > 8)
-		onScroll()
-		window.addEventListener("scroll", onScroll, { passive: true })
-		return () => window.removeEventListener("scroll", onScroll)
-	}, [])
-
 	return (
-		<header
-			className={cn(
-				"sticky top-0 z-50 w-full border-b transition-colors duration-300",
-				scrolled
-					? "border-border bg-background/80 backdrop-blur-md"
-					: "border-transparent bg-transparent",
-			)}>
-			<Container className="flex items-center justify-between gap-5 py-3">
-				<NextLink
-					href="/"
-					className="text-lg 
-				uppercase font-semibold">
-					Essien
-				</NextLink>
+		<header className="sticky top-0 z-50 w-full border-b border-border bg-background/85 backdrop-blur-md">
+			<Container className="flex items-center justify-between gap-3 py-3">
+				<div className="flex min-w-0 items-center gap-2">
+					<NextLink
+						href="/"
+						className="text-lg font-semibold uppercase tracking-tight text-heading">
+						Essien
+					</NextLink>
 
-				<nav className="flex items-center gap-6">
-					<div className="flex gap-2 items-center">
-						<div className="relative w-7 h-7">
-							<Image
-								src="/images/portfolio-image.png"
-								fill
-								alt="portfolio profile image"
-								className="rounded-lg object-cover object-top"
-							/>
-						</div>
-						<ToggleModeBtn />
-					</div>
-					<Link href="/book-me">
+					<span className="whitespace-nowrap border-l border-border pl-2 text-[10px] text-muted sm:text-[11px]">
+						1+ years experience
+					</span>
+				</div>
+
+				<nav className="flex items-center gap-2">
+					<ToggleModeBtn />
+
+					<Link href="/book-me" size="sm" className="gap-1.5">
 						Book Me
-						<ArrowRightIcon />
+						<ArrowRight className="size-4" />
 					</Link>
 				</nav>
 			</Container>

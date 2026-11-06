@@ -10,19 +10,14 @@ type ToggleModeContextValue = {
 
 const ToggleModeContext = createContext<ToggleModeContextValue | null>(null);
 
-function ToggleModeProvider({ children }: { children: ReactNode }) {
-	const [mode, setMode] = useState(() => {
-		if (typeof window !== "undefined") {
-			const storedTheme = localStorage.getItem("theme");
-			if (storedTheme) return storedTheme;
-
-			const prefersDark = window.matchMedia(
-				"(prefers-color-scheme: dark)",
-			).matches;
-			return prefersDark ? "dark" : "light";
-		}
-		return "light";
-	});
+function ToggleModeProvider({
+	children,
+	initialMode = "light",
+}: {
+	children: ReactNode;
+	initialMode?: string;
+}) {
+	const [mode, setMode] = useState(initialMode);
 
 	useEffect(() => {
 		localStorage.setItem("theme", mode);

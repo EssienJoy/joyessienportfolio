@@ -1,149 +1,72 @@
-import { Clock, MessageSquareQuote, Zap } from "lucide-react"
 import type { Metadata } from "next"
-import NextLink from "next/link"
+import { Mail } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa6"
 
-import { BookingCalendar, Container, Link } from "@/components"
+import { ArrowToHome, Container, buttonVariants } from "@/components"
+import { CONTACT_EMAIL, WHATSAPP_URL } from "@/lib/constants/data"
 import ContactMeForm from "./_components/ContactMeForm"
-import { socials } from "@/lib/constants/data"
 
 export const metadata: Metadata = {
-	title: "Book Me",
+	title: "Contact",
+	description:
+		"Get in touch with Essien about a frontend role or a website project.",
 }
 
-function ContactMe() {
-	const benefits = [
-		{
-			icon: Clock,
-			title: "30-minute free consultation",
-			text: "No commitment. We'll discuss your project, goals, and how we can help.",
-		},
-		{
-			icon: MessageSquareQuote,
-			title: "Direct communication",
-			text: "Work directly with the developer — no middlemen, full transparency.",
-		},
-		{
-			icon: Zap,
-			title: "Fast turnaround",
-			text: "Landing pages in 10–14 days. Full websites in 3–4 weeks. No delays.",
-		},
-	]
+export default function ContactPage() {
 	return (
-		<section id="contactme" className="py-8">
-			<Container>
-				<header className=" mt-8" data-aos="fade-up">
-					<h1
-						className="text-balance text-muted text-md 
-					font-semibold tracking-tight
-					  ">
-						Book a Call
-					</h1>
-					<p
-						className="mt-4 text-balance text-3xl 
-					 ">
-						Let&apos;s transform your vision into a lasting impact!
-					</p>
-					<p className="mt-3 text-muted">
-						Get in touch — or reach out directly on {""}
-						{socials.map((s) => (
-							<NextLink
-								className="text-accent dark:text-blue-300"
-								key={s.href}
-								href={s.href}>
-								{s.text}/{" "}
-							</NextLink>
-						))}
-					</p>
-				</header>
+		<Container className="py-10 sm:py-14">
+			<ArrowToHome />
 
-				<div
-					data-aos="fade-up"
-					data-aos-delay="100"
-					className="mt-12 grid gap-5 
-				sm:grid-cols-2 lg:grid-cols-3">
-					{benefits.map(({ icon: Icon, title, text }, index) => (
-						<div
-							key={title}
-							data-aos="fade-up"
-							data-aos-delay={index * 100}
-							className="rounded-xl border border-border
-							 bg-surface p-6">
-							<span
-								className="inline-flex size-10
-							 items-center justify-center rounded-full
-							  bg-accent text-primary dark:text-white">
-								<Icon className="size-5" />
-							</span>
-							<h3
-								className="mt-4 text-lg 
-							font-semibold text-heading">
-								{title}
-							</h3>
-							<p
-								className="mt-2
-							 leading-relaxed text-muted">
-								{text}
-							</p>
-						</div>
-					))}
+			<div className="mx-auto mt-6 max-w-2xl text-center">
+				<p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+					Contact
+				</p>
+
+				<h1 className="mt-2 text-balance text-4xl font-semibold tracking-tight text-heading sm:text-5xl">
+					Let&apos;s work together
+				</h1>
+
+				<p className="mx-auto mt-4 max-w-xl text-muted">
+					Hiring for a frontend role or need a website built? Message
+					me on WhatsApp or send the form below — I usually reply
+					within 24 hours.
+				</p>
+
+				<div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+					<a
+						href={WHATSAPP_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						className={buttonVariants({ size: "lg" })}>
+						<FaWhatsapp className="size-5" aria-hidden />
+						Chat on WhatsApp
+					</a>
+
+					<a
+						href={`mailto:${CONTACT_EMAIL}`}
+						className={buttonVariants({
+							size: "lg",
+							variant: "outline",
+						})}>
+						<Mail className="size-4" aria-hidden />
+						{CONTACT_EMAIL}
+					</a>
 				</div>
+			</div>
 
-				<div
-					data-aos="fade-up"
-					data-aos-delay="150"
-					className="mt-10 flex flex-col
-				 items-center justify-center 
-				 gap-4 sm:flex-row">
-					<Link href="#contact-form" className="w-full sm:w-auto">
-						Request a quote
-					</Link>
-					<Link
-						href="#book-a-call"
-						variant="outline"
-						className="w-full sm:w-auto">
-						Book a call
-					</Link>
+			<div className="mx-auto mt-8 max-w-2xl rounded-2xl border border-border bg-surface p-6 sm:p-8">
+				<h2 className="text-lg font-semibold text-heading">
+					Send a project brief
+				</h2>
+				<p className="mt-1 text-sm text-muted">
+					Tell me a little about what you need and I&apos;ll get back
+					to you.
+				</p>
+
+				<div className="mt-5">
+					<ContactMeForm />
 				</div>
-
-				<div
-					data-aos="fade-up"
-					id="contact-form"
-					className="mx-auto 
-				mt-20 max-w-2xl">
-					<h2
-						className="text-center text-2xl 
-					font-semibold tracking-tight 
-					text-heading sm:text-3xl">
-						Contact information
-					</h2>
-
-					<div
-						className="mt-8 rounded-2xl border
-					 border-border bg-surface p-6 sm:p-8">
-						<ContactMeForm />
-					</div>
-				</div>
-				<div id="book-a-call" data-aos="fade-up" className="mx-auto mt-20 max-w-3xl">
-					<h2
-						className="text-center text-2xl 
-						font-semibold tracking-tight 
-						text-heading sm:text-3xl">
-						Book a call
-					</h2>
-					<p className="mt-3 text-center text-muted">
-						Pick a time that works for you. A Google Meet link is
-						customized automatically for every booking.
-					</p>
-
-					<div
-						className="mt-8 overflow-hidden rounded-2xl 
-						border border-border bg-surface">
-						<BookingCalendar />
-					</div>
-				</div>
-			</Container>
-		</section>
+			</div>
+		</Container>
 	)
 }
-
-export default ContactMe

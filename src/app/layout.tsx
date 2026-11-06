@@ -5,10 +5,9 @@ import { cookies } from "next/headers"
 
 import "@/app/globals.css"
 import {
-	ScrollAnimations,
-	ScrollToTop,
 	ToggleModeProvider,
 	ToggleProvider,
+	WhatsAppButton,
 } from "@/components"
 import { Footer, Header } from "@/app/(home)/_components"
 
@@ -45,12 +44,11 @@ export default async function RootLayout({
 				  dark:bg-[#08001a]
 				  dark:text-primary-white  text-black`}>
 				<ToggleProvider>
-					<ToggleModeProvider>
+					<ToggleModeProvider initialMode={theme}>
 						<Header />
 						<main>{children}</main>
 						<Footer />
-						<ScrollToTop />
-					<ScrollAnimations />
+						<WhatsAppButton />
 
 						<Toaster
 							position="top-center"

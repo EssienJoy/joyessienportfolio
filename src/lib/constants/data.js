@@ -198,6 +198,13 @@ export const socials = [
     },
 ];
 
+export const CONTACT_EMAIL = "talktoessienjoy@gmail.com";
+export const WHATSAPP_NUMBER = "2348087152901";
+export const WHATSAPP_MESSAGE = "hello, i want to build a website";
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    WHATSAPP_MESSAGE,
+)}`;
+
 export const navLink = [
     // {
     //     text: "Home",

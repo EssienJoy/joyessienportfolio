@@ -1,15 +1,15 @@
-import Link from "next/link";
-import { IoIosArrowRoundBack } from "react-icons/io";
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
 
-function ArrowToHome() {
+function ArrowToHome({ label = "Back to home" }: { label?: string }) {
 	return (
-		<Link href='/' className='p-1'>
-			<IoIosArrowRoundBack
-				size='2rem'
-				className='text-primary-black dark:text-primary-white'
-			/>
+		<Link
+			href="/"
+			className="inline-flex w-fit items-center gap-1.5 text-sm text-muted transition-colors hover:text-heading">
+			<ArrowLeft className="size-4" aria-hidden />
+			{label}
 		</Link>
-	);
+	)
 }
 
-export default ArrowToHome;
+export default ArrowToHome

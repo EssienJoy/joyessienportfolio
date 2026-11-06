@@ -1,13 +1,12 @@
-import { Faq, Hero, Projects, WhatYouGet, WhyTrustUs } from "./_components"
+import { Contact, Hero, Projects, TrustBar } from "./_components"
 
 export default function Home() {
 	return (
 		<>
 			<Hero />
-			<WhyTrustUs />
+			<TrustBar />
 			<Projects />
-			<WhatYouGet />
-			<Faq />
+			<Contact />
 		</>
 	)
 }
