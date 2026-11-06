@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Star } from "lucide-react"
 
 import { ArrowToHome, Container } from "@/components"
+import { reviews } from "@/lib/data/reviews"
 
 export const metadata: Metadata = {
 	title: "Reviews",
