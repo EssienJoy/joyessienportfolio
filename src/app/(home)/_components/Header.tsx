@@ -13,10 +13,6 @@ function Header() {
 						className="text-lg font-semibold uppercase tracking-tight text-heading">
 						Essien
 					</NextLink>
-
-					<span className="whitespace-nowrap border-l border-border pl-2 text-[10px] text-muted sm:text-[11px]">
-						1+ years experience
-					</span>
 				</div>
 
 				<nav className="flex items-center gap-2">
